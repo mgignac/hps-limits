@@ -1,0 +1,40 @@
+{
+    "regions": {
+        "tight_selection": {
+            "background": 50.0,
+            "observed": 48,
+            "systematics": [
+                {
+                    "name": "bkg_stat_tight",
+                    "type": "shapesys",
+                    "samples": ["background"],
+                    "value": 5.0
+                },
+                {
+                    "name": "luminosity",
+                    "type": "normsys",
+                    "samples": ["signal"],
+                    "value": 0.03
+                }
+            ]
+        },
+        "loose_selection": {
+            "background": 80.0,
+            "observed": 82,
+            "systematics": [
+                {
+                    "name": "bkg_stat_loose",
+                    "type": "shapesys",
+                    "samples": ["background"],
+                    "value": 8.0
+                },
+                {
+                    "name": "luminosity",
+                    "type": "normsys",
+                    "samples": ["signal"],
+                    "value": 0.03
+                }
+            ]
+        }
+    }
+}
