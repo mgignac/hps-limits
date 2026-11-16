@@ -1,0 +1,44 @@
+# HPS Limits — A′ L1L1+L1L2+L2L2, rmng_bkg=0, 10%, ZERO background (comparison twin)
+#
+# Identical to config_ap_rmng_bkg_0_10pc_withbkg.yaml (same signal, same ROOT
+# style / annotations / PDF output), but with the zero-background assumption
+# instead of the measured background counts — i.e. the ideal "what if we had
+# zero background" limit, for side-by-side comparison with the with-background run.
+#
+#   python3.9 scripts/run_limits.py --config examples/config_ap_rmng_bkg_0_10pc_zerobkg.yaml
+
+label: "HPS A' (rmng_bkg=0, 10%, zero bkg)"
+mode: classic
+signal_format: ap_displaced
+
+output_dir: ../plots/ap_rmng_bkg_0_10pc_zerobkg_styled
+
+signal_jsons:
+  - file:   ../data/sarah-latest/rmng_bkg_0/ap_displaced_yield__l1l1_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L1L1
+  - file:   ../data/sarah-latest/rmng_bkg_0/ap_displaced_yield__l1l2_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L1L2
+  - file:   ../data/sarah-latest/rmng_bkg_0/ap_displaced_yield__l2l2_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L2L2
+
+# No background_json — zero-background assumption below.
+
+simps: false
+per_region: true
+run_cls: false
+run_mu: true
+mu_cap: 10000.0
+cl_level: 0.90
+
+zero_background: true               # ideal zero-background limit
+signal_scale: 1.0                   # 10%
+
+# ROOT-style μ 2D map: annotations + y-axis (match the with-background twin)
+experiment_label: "HPS work in progress"
+lumi_label: "18.01 pb$^{-1}$ @ 3.74 GeV"
+y_max: 8.0e-8
+plot_format: pdf
+
+bkg_zero_floor: false
+summary_plot: false
+prior_exclusions: []

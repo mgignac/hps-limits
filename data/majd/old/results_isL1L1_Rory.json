@@ -1,0 +1,2234 @@
+{
+  "metadata": {
+    "hit_category": "isL1L1",
+    "Val2": 7,
+    "proj_sig_cut": 2.8,
+    "z0_regions": {
+      "lo": {
+        "lo": 0.24,
+        "hi": 0.32
+      },
+      "hi": {
+        "lo": 0.32,
+        "hi": null
+      }
+    },
+    "mass_grid_MeV": [
+      50.0,
+      75.0,
+      100.0,
+      125.0,
+      150.0,
+      175.0,
+      200.0,
+      225.0,
+      250.0
+    ],
+    "epsilon_grid": [
+      0.0001,
+      0.00011253355826007646,
+      0.00012663801734674035,
+      0.00014251026703029977,
+      0.0001603718743751331,
+      0.00018047217668271703,
+      0.0002030917620904735,
+      0.00022854638641349906,
+      0.00025719138090593444,
+      0.0002894266124716752,
+      0.0003257020655659783,
+      0.0003665241237079626,
+      0.0004124626382901352,
+      0.00046415888336127773,
+      0.0005223345074266843,
+      0.0005878016072274912,
+      0.0006614740641230146,
+      0.0007443803013251688,
+      0.0008376776400682916,
+      0.0009426684551178855,
+      0.0010608183551394483,
+      0.0011937766417144358,
+      0.0013433993325989001,
+      0.001511775070615663,
+      0.0017012542798525892,
+      0.0019144819761699576,
+      0.002154434690031882,
+      0.0024244620170823282,
+      0.0027283333764867696,
+      0.00307029062975785,
+      0.003455107294592218,
+      0.003888155180308085,
+      0.004375479375074184,
+      0.004923882631706742,
+      0.005541020330009492,
+      0.006235507341273912,
+      0.007017038286703823,
+      0.007896522868499725,
+      0.008886238162743407,
+      0.01
+    ],
+    "description": "Signal yields for two |z0| regions (hit-category specific). Hit category: isL1L1. Cut order: psum in [1.5,3.0], hit-category, vtx_proj_sig < 2.8, then |z0| band. Regions: lo=(0.24,0.32), hi=(0.32,inf). signal_regionX = S_yield."
+  },
+  "n_points": 360,
+  "data": [
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0001,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.00011253355826007646,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.00012663801734674035,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.00014251026703029977,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0001603718743751331,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.00018047217668271703,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0002030917620904735,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.00022854638641349906,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.00025719138090593444,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0002894266124716752,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0003257020655659783,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0003665241237079626,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0004124626382901352,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.00046415888336127773,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0005223345074266843,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0005878016072274912,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0006614740641230146,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0007443803013251688,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0008376776400682916,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0009426684551178855,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0010608183551394483,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0011937766417144358,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0013433993325989001,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.001511775070615663,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0017012542798525892,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0019144819761699576,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.002154434690031882,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0024244620170823282,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0027283333764867696,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.00307029062975785,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.003455107294592218,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.003888155180308085,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.004375479375074184,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.004923882631706742,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.005541020330009492,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.006235507341273912,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.007017038286703823,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.007896522868499725,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.008886238162743407,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.01,
+      "signal_regionlo": 0.0,
+      "signal_regionhi": 0.0
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0001,
+      "signal_regionlo": 0.007171657267474379,
+      "signal_regionhi": 0.0019762435919063333
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00011253355826007646,
+      "signal_regionlo": 0.00943938023209446,
+      "signal_regionhi": 0.0026010038092940885
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00012663801734674035,
+      "signal_regionlo": 0.012065316677343054,
+      "signal_regionhi": 0.0033243485366209143
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00014251026703029977,
+      "signal_regionlo": 0.015220921155352,
+      "signal_regionhi": 0.004193447161421456
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0001603718743751331,
+      "signal_regionlo": 0.019138053360302526,
+      "signal_regionhi": 0.00527206075362071
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00018047217668271703,
+      "signal_regionlo": 0.024120224699900435,
+      "signal_regionhi": 0.006643603888736326
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0002030917620904735,
+      "signal_regionlo": 0.030555201043941084,
+      "signal_regionhi": 0.008414556341185793
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00022854638641349906,
+      "signal_regionlo": 0.038930049080704,
+      "signal_regionhi": 0.010718510023732126
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00025719138090593444,
+      "signal_regionlo": 0.049850795528156015,
+      "signal_regionhi": 0.013721426010166436
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0002894266124716752,
+      "signal_regionlo": 0.06407060928185991,
+      "signal_regionhi": 0.017629141641041072
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0003257020655659783,
+      "signal_regionlo": 0.08253311053894419,
+      "signal_regionhi": 0.022698884847622166
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0003665241237079626,
+      "signal_regionlo": 0.10644146428735386,
+      "signal_regionhi": 0.02925762481633712
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0004124626382901352,
+      "signal_regionlo": 0.1373698923850252,
+      "signal_regionhi": 0.037731653084100994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00046415888336127773,
+      "signal_regionlo": 0.17744292831249114,
+      "signal_regionhi": 0.048694031691091634
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0005223345074266843,
+      "signal_regionlo": 0.22962025255175178,
+      "signal_regionhi": 0.06293970878568866
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0005878016072274912,
+      "signal_regionlo": 0.29814283800943514,
+      "signal_regionhi": 0.08160249776701335
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0006614740641230146,
+      "signal_regionlo": 0.3892215094390213,
+      "signal_regionhi": 0.10633410554828965
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0007443803013251688,
+      "signal_regionlo": 0.5120845066414169,
+      "signal_regionhi": 0.13957330292777625
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0008376776400682916,
+      "signal_regionlo": 0.6805488907122654,
+      "signal_regionhi": 0.1849431673046164
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0009426684551178855,
+      "signal_regionlo": 0.9153426099425697,
+      "signal_regionhi": 0.2478251068041998
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0010608183551394483,
+      "signal_regionlo": 1.2474746172288351,
+      "signal_regionhi": 0.3361665951177596
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0011937766417144358,
+      "signal_regionlo": 1.7230087039149868,
+      "signal_regionhi": 0.4615762445281119
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0013433993325989001,
+      "signal_regionlo": 2.409587343416232,
+      "signal_regionhi": 0.6407255625368901
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.001511775070615663,
+      "signal_regionlo": 3.4048537187138788,
+      "signal_regionhi": 0.896974517778433
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0017012542798525892,
+      "signal_regionlo": 4.846303585274738,
+      "signal_regionhi": 1.2619073720425773
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0019144819761699576,
+      "signal_regionlo": 6.920690190490925,
+      "signal_regionhi": 1.776027066702478
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.002154434690031882,
+      "signal_regionlo": 9.868425511685757,
+      "signal_regionhi": 2.487153565033608
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0024244620170823282,
+      "signal_regionlo": 13.974150845584527,
+      "signal_regionhi": 3.444186475045092
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0027283333764867696,
+      "signal_regionlo": 19.529380989724036,
+      "signal_regionhi": 4.683277716485912
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00307029062975785,
+      "signal_regionlo": 26.749741775463544,
+      "signal_regionhi": 6.204204504489203
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.003455107294592218,
+      "signal_regionlo": 35.634411781445344,
+      "signal_regionhi": 7.9384799817550356
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.003888155180308085,
+      "signal_regionlo": 45.77841122461004,
+      "signal_regionhi": 9.718534820461434
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.004375479375074184,
+      "signal_regionlo": 56.19468593323417,
+      "signal_regionhi": 11.26706175149246
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.004923882631706742,
+      "signal_regionlo": 65.2592028114325,
+      "signal_regionhi": 12.230167538676367
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.005541020330009492,
+      "signal_regionlo": 70.915926438353,
+      "signal_regionhi": 12.268395540294032
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.006235507341273912,
+      "signal_regionlo": 71.21676053390432,
+      "signal_regionhi": 11.194092283226801
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.007017038286703823,
+      "signal_regionlo": 65.11165115449941,
+      "signal_regionhi": 9.108247493421825
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.007896522868499725,
+      "signal_regionlo": 53.19402575006677,
+      "signal_regionhi": 6.450870806575616
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.008886238162743407,
+      "signal_regionlo": 37.92934075025705,
+      "signal_regionhi": 3.86843481211864
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.01,
+      "signal_regionlo": 22.925766261785622,
+      "signal_regionhi": 1.907715959121962
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0001,
+      "signal_regionlo": 0.05485967690255015,
+      "signal_regionhi": 0.06328339438194192
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00011253355826007646,
+      "signal_regionlo": 0.0693743140407435,
+      "signal_regionhi": 0.08001569152725888
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00012663801734674035,
+      "signal_regionlo": 0.08771173398911936,
+      "signal_regionhi": 0.10114818904607684
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00014251026703029977,
+      "signal_regionlo": 0.1111935957494927,
+      "signal_regionhi": 0.12819878368875498
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0001603718743751331,
+      "signal_regionlo": 0.14148580463242524,
+      "signal_regionhi": 0.16307789469744446
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00018047217668271703,
+      "signal_regionlo": 0.1806719759474737,
+      "signal_regionhi": 0.20817026448149273
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0002030917620904735,
+      "signal_regionlo": 0.23135751791966336,
+      "signal_regionhi": 0.26645026455073356
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00022854638641349906,
+      "signal_regionlo": 0.2968263303723353,
+      "signal_regionhi": 0.34165492494563005
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00025719138090593444,
+      "signal_regionlo": 0.38128538582570526,
+      "signal_regionhi": 0.43855339094556334
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0002894266124716752,
+      "signal_regionlo": 0.4902520796215718,
+      "signal_regionhi": 0.5633726549113396
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0003257020655659783,
+      "signal_regionlo": 0.6311678816765502,
+      "signal_regionhi": 0.7244697179449753
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0003665241237079626,
+      "signal_regionlo": 0.8143633350659514,
+      "signal_regionhi": 0.9333831377177558
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0004124626382901352,
+      "signal_regionlo": 1.054559384887026,
+      "signal_regionhi": 1.2064565718111255
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00046415888336127773,
+      "signal_regionlo": 1.3731764037751468,
+      "signal_regionhi": 1.5673088627411405
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0005223345074266843,
+      "signal_regionlo": 1.8018463845350603,
+      "signal_regionhi": 2.050535425537035
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0005878016072274912,
+      "signal_regionlo": 2.3877004587746473,
+      "signal_regionhi": 2.7071686332815217
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0006614740641230146,
+      "signal_regionlo": 3.2012500408952587,
+      "signal_regionhi": 3.6125974637444536
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0007443803013251688,
+      "signal_regionlo": 4.348007511696395,
+      "signal_regionhi": 4.877823951367804
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0008376776400682916,
+      "signal_regionlo": 5.98538958257552,
+      "signal_regionhi": 6.665038816703274
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0009426684551178855,
+      "signal_regionlo": 8.346833614664934,
+      "signal_regionhi": 9.20834384309725
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0010608183551394483,
+      "signal_regionlo": 11.775197530760467,
+      "signal_regionhi": 12.83964136148179
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0011937766417144358,
+      "signal_regionlo": 16.76685472916973,
+      "signal_regionhi": 18.01752667942361
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0013433993325989001,
+      "signal_regionlo": 24.025327893434884,
+      "signal_regionhi": 25.35231111398524
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.001511775070615663,
+      "signal_regionlo": 34.51690998631642,
+      "signal_regionhi": 35.611670327346225
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0017012542798525892,
+      "signal_regionlo": 49.50778104881816,
+      "signal_regionhi": 49.67811160530828
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0019144819761699576,
+      "signal_regionlo": 70.54016403711188,
+      "signal_regionhi": 68.41380932004023
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.002154434690031882,
+      "signal_regionlo": 99.27521780725361,
+      "signal_regionhi": 92.38003935782474
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0024244620170823282,
+      "signal_regionlo": 137.10449947330886,
+      "signal_regionhi": 121.37858500546767
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0027283333764867696,
+      "signal_regionlo": 184.4419119073877,
+      "signal_regionhi": 153.86025688242395
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00307029062975785,
+      "signal_regionlo": 239.7078301946706,
+      "signal_regionhi": 186.395082272819
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.003455107294592218,
+      "signal_regionlo": 298.25257790565195,
+      "signal_regionhi": 213.5734086553301
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.003888155180308085,
+      "signal_regionlo": 351.79656910320114,
+      "signal_regionhi": 228.77195143297604
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.004375479375074184,
+      "signal_regionlo": 389.1794464004394,
+      "signal_regionhi": 226.01135193098023
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.004923882631706742,
+      "signal_regionlo": 398.990660229853,
+      "signal_regionhi": 202.598058136826
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.005541020330009492,
+      "signal_regionlo": 373.83587069302394,
+      "signal_regionhi": 161.489182899988
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.006235507341273912,
+      "signal_regionlo": 314.78400537635866,
+      "signal_regionhi": 111.65683151096934
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.007017038286703823,
+      "signal_regionlo": 233.4321287473654,
+      "signal_regionhi": 65.02117799009591
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.007896522868499725,
+      "signal_regionlo": 148.9267891431126,
+      "signal_regionhi": 30.831414297258775
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.008886238162743407,
+      "signal_regionlo": 79.75498394054722,
+      "signal_regionhi": 11.464677566102171
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.01,
+      "signal_regionlo": 35.07635346339289,
+      "signal_regionhi": 3.2058112977789843
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0001,
+      "signal_regionlo": 0.07065298068891304,
+      "signal_regionhi": 0.1547616656061386
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00011253355826007646,
+      "signal_regionlo": 0.08540248509265741,
+      "signal_regionhi": 0.18702096586788317
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00012663801734674035,
+      "signal_regionlo": 0.1069968109415225,
+      "signal_regionhi": 0.23423263868223707
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00014251026703029977,
+      "signal_regionlo": 0.13692632113976244,
+      "signal_regionhi": 0.299627883009143
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0001603718743751331,
+      "signal_regionlo": 0.17692655886463415,
+      "signal_regionhi": 0.38695355473036824
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00018047217668271703,
+      "signal_regionlo": 0.2290957349047067,
+      "signal_regionhi": 0.5007170529953632
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0002030917620904735,
+      "signal_regionlo": 0.2960980402785602,
+      "signal_regionhi": 0.6466114511984803
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00022854638641349906,
+      "signal_regionlo": 0.3814998737276551,
+      "signal_regionhi": 0.8322183350938485
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00025719138090593444,
+      "signal_regionlo": 0.4903069980234963,
+      "signal_regionhi": 1.068126879287318
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0002894266124716752,
+      "signal_regionlo": 0.6298004653016993,
+      "signal_regionhi": 1.3696640903329533
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0003257020655659783,
+      "signal_regionlo": 0.8108121694633691,
+      "signal_regionhi": 1.7595086670263658
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0003665241237079626,
+      "signal_regionlo": 1.0496436849345405,
+      "signal_regionhi": 2.2715674139293727
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0004124626382901352,
+      "signal_regionlo": 1.3709245483227432,
+      "signal_regionhi": 2.956638299160801
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00046415888336127773,
+      "signal_regionlo": 1.8118425624050587,
+      "signal_regionhi": 3.8905776364844558
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0005223345074266843,
+      "signal_regionlo": 2.4283777688462904,
+      "signal_regionhi": 5.185933217704977
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0005878016072274912,
+      "signal_regionlo": 3.3044539791516017,
+      "signal_regionhi": 7.008279310847618
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0006614740641230146,
+      "signal_regionlo": 4.56529956171933,
+      "signal_regionhi": 9.59871046414399
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0007443803013251688,
+      "signal_regionlo": 6.396760826225497,
+      "signal_regionhi": 13.303900999700392
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0008376776400682916,
+      "signal_regionlo": 9.072723563846148,
+      "signal_regionhi": 18.614336367146006
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0009426684551178855,
+      "signal_regionlo": 12.992854181573351,
+      "signal_regionhi": 26.20885038483696
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0010608183551394483,
+      "signal_regionlo": 18.73185885768255,
+      "signal_regionhi": 36.997929263709295
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0011937766417144358,
+      "signal_regionlo": 27.097999279560554,
+      "signal_regionhi": 52.14731239252395
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0013433993325989001,
+      "signal_regionlo": 39.190420236307105,
+      "signal_regionhi": 73.0455457915996
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.001511775070615663,
+      "signal_regionlo": 56.42897235047989,
+      "signal_regionhi": 101.15569075840966
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0017012542798525892,
+      "signal_regionlo": 80.50459686195003,
+      "signal_regionhi": 137.67203896716137
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0019144819761699576,
+      "signal_regionlo": 113.16633155849863,
+      "signal_regionhi": 182.91193353766775
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.002154434690031882,
+      "signal_regionlo": 155.7397799953016,
+      "signal_regionhi": 235.45055604766364
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0024244620170823282,
+      "signal_regionlo": 208.30143258949064,
+      "signal_regionhi": 291.18820033648257
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0027283333764867696,
+      "signal_regionlo": 268.5708047988928,
+      "signal_regionhi": 342.80351528006446
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00307029062975785,
+      "signal_regionlo": 330.85697120953716,
+      "signal_regionhi": 380.25246962105956
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.003455107294592218,
+      "signal_regionlo": 385.7219723678488,
+      "signal_regionhi": 392.875766652268
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.003888155180308085,
+      "signal_regionlo": 421.15185507309536,
+      "signal_regionhi": 373.07458463080786
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.004375479375074184,
+      "signal_regionlo": 425.6616383067718,
+      "signal_regionhi": 320.44589483661866
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.004923882631706742,
+      "signal_regionlo": 392.8307143572898,
+      "signal_regionhi": 244.16228304333865
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.005541020330009492,
+      "signal_regionlo": 325.56401228132427,
+      "signal_regionhi": 161.16443835847113
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.006235507341273912,
+      "signal_regionlo": 237.4512202987372,
+      "signal_regionhi": 89.57367210365514
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.007017038286703823,
+      "signal_regionlo": 148.8689795967583,
+      "signal_regionhi": 40.54980373581485
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.007896522868499725,
+      "signal_regionlo": 78.25944296435912,
+      "signal_regionhi": 14.400883236541516
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.008886238162743407,
+      "signal_regionlo": 33.766279155957214,
+      "signal_regionhi": 3.8529542347511634
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.01,
+      "signal_regionlo": 11.863536716998523,
+      "signal_regionhi": 0.7462132594643788
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0001,
+      "signal_regionlo": 0.07599280321615627,
+      "signal_regionhi": 0.23600268510337696
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00011253355826007646,
+      "signal_regionlo": 0.09059775958545793,
+      "signal_regionhi": 0.2812404515219138
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00012663801734674035,
+      "signal_regionlo": 0.11357969300264678,
+      "signal_regionhi": 0.35239352711290106
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00014251026703029977,
+      "signal_regionlo": 0.14637045366945922,
+      "signal_regionhi": 0.4538220945075196
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0001603718743751331,
+      "signal_regionlo": 0.19060516944539352,
+      "signal_regionhi": 0.590464196541856
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00018047217668271703,
+      "signal_regionlo": 0.24830448395289223,
+      "signal_regionhi": 0.7683712955510933
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0002030917620904735,
+      "signal_regionlo": 0.3221915856027146,
+      "signal_regionhi": 0.9956422924655202
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00022854638641349906,
+      "signal_regionlo": 0.416209868191061,
+      "signal_regionhi": 1.2839440093354257
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00025719138090593444,
+      "signal_regionlo": 0.5363340744020375,
+      "signal_regionhi": 1.6508752880536477
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0002894266124716752,
+      "signal_regionlo": 0.6918069109329766,
+      "signal_regionhi": 2.1235256343093605
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0003257020655659783,
+      "signal_regionlo": 0.8969910484450958,
+      "signal_regionhi": 2.743707386055207
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0003665241237079626,
+      "signal_regionlo": 1.1741133522227276,
+      "signal_regionhi": 3.5755144871003512
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0004124626382901352,
+      "signal_regionlo": 1.5573089485650171,
+      "signal_regionhi": 4.716091421280727
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00046415888336127773,
+      "signal_regionlo": 2.0985668410372513,
+      "signal_regionhi": 6.310780622523078
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0005223345074266843,
+      "signal_regionlo": 2.876457554266117,
+      "signal_regionhi": 8.574114762945355
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0005878016072274912,
+      "signal_regionlo": 4.0088993443411685,
+      "signal_regionhi": 11.818296587419844
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0006614740641230146,
+      "signal_regionlo": 5.671670241505495,
+      "signal_regionhi": 16.49053223670057
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0007443803013251688,
+      "signal_regionlo": 8.124782858182845,
+      "signal_regionhi": 23.21916601255888
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0008376776400682916,
+      "signal_regionlo": 11.748887370618384,
+      "signal_regionhi": 32.864762184747576
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0009426684551178855,
+      "signal_regionlo": 17.092843196344962,
+      "signal_regionhi": 46.56419140319899
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0010608183551394483,
+      "signal_regionlo": 24.930141752051558,
+      "signal_regionhi": 65.7412103895736
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0011937766417144358,
+      "signal_regionlo": 36.313767967855966,
+      "signal_regionhi": 92.03507464560089
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0013433993325989001,
+      "signal_regionlo": 52.60359686654513,
+      "signal_regionhi": 127.07360385149883
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.001511775070615663,
+      "signal_regionlo": 75.41591460001948,
+      "signal_regionhi": 172.00430783183498
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0017012542798525892,
+      "signal_regionlo": 106.41515611554658,
+      "signal_regionhi": 226.72855901394553
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0019144819761699576,
+      "signal_regionlo": 146.8510661158386,
+      "signal_regionhi": 288.90182432503474
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.002154434690031882,
+      "signal_regionlo": 196.77841454689994,
+      "signal_regionhi": 352.98913868477325
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0024244620170823282,
+      "signal_regionlo": 254.03079320460157,
+      "signal_regionhi": 409.9398334074086
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0027283333764867696,
+      "signal_regionlo": 313.2705578806129,
+      "signal_regionhi": 448.18231383883915
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00307029062975785,
+      "signal_regionlo": 365.7137016990721,
+      "signal_regionhi": 456.37851275083045
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.003455107294592218,
+      "signal_regionlo": 400.2135519372719,
+      "signal_regionhi": 427.5763471910633
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.003888155180308085,
+      "signal_regionlo": 406.0501131491944,
+      "signal_regionhi": 363.2588600042046
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.004375479375074184,
+      "signal_regionlo": 376.9771396287919,
+      "signal_regionhi": 274.95039465177
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.004923882631706742,
+      "signal_regionlo": 315.08182040134545,
+      "signal_regionhi": 181.40367348386144
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.005541020330009492,
+      "signal_regionlo": 232.25240344119305,
+      "signal_regionhi": 101.55120831534163
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.006235507341273912,
+      "signal_regionlo": 147.17244536954558,
+      "signal_regionhi": 46.67184340457478
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.007017038286703823,
+      "signal_regionlo": 77.78469842785918,
+      "signal_regionhi": 16.92243072711841
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.007896522868499725,
+      "signal_regionlo": 33.16849357907876,
+      "signal_regionhi": 4.615763496149682
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.008886238162743407,
+      "signal_regionlo": 11.045394949356568,
+      "signal_regionhi": 0.8950277256084933
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.01,
+      "signal_regionlo": 2.802941898535615,
+      "signal_regionhi": 0.11530242766405384
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0001,
+      "signal_regionlo": 0.05174511856075037,
+      "signal_regionhi": 0.21066500898686882
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00011253355826007646,
+      "signal_regionlo": 0.06218485692552453,
+      "signal_regionhi": 0.2530141847840922
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00012663801734674035,
+      "signal_regionlo": 0.07848317842418022,
+      "signal_regionhi": 0.31908342092902975
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00014251026703029977,
+      "signal_regionlo": 0.10156370752984395,
+      "signal_regionhi": 0.4125203588814411
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0001603718743751331,
+      "signal_regionlo": 0.13252779033477796,
+      "signal_regionhi": 0.537627460571525
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00018047217668271703,
+      "signal_regionlo": 0.17282832290037026,
+      "signal_regionhi": 0.7000291628882479
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0002030917620904735,
+      "signal_regionlo": 0.22455995300241932,
+      "signal_regionhi": 0.9077836199663817
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00022854638641349906,
+      "signal_regionlo": 0.2909195639571252,
+      "signal_regionhi": 1.1731332024380097
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00025719138090593444,
+      "signal_regionlo": 0.37691355730612064,
+      "signal_regionhi": 1.5151570477669496
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0002894266124716752,
+      "signal_regionlo": 0.4904221801026272,
+      "signal_regionhi": 1.9636832835946185
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0003257020655659783,
+      "signal_regionlo": 0.64378228712697,
+      "signal_regionhi": 2.564946971876768
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0003665241237079626,
+      "signal_regionlo": 0.8561277123675052,
+      "signal_regionhi": 3.389649952754204
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0004124626382901352,
+      "signal_regionlo": 1.1568431503739538,
+      "signal_regionhi": 4.544288068825109
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00046415888336127773,
+      "signal_regionlo": 1.5906568576250644,
+      "signal_regionhi": 6.186825914156464
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0005223345074266843,
+      "signal_regionlo": 2.2251286666846,
+      "signal_regionhi": 8.547910763996821
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0005878016072274912,
+      "signal_regionlo": 3.1615715860372515,
+      "signal_regionhi": 11.9585646075287
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0006614740641230146,
+      "signal_regionlo": 4.550712324127229,
+      "signal_regionhi": 16.88414463156601
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0007443803013251688,
+      "signal_regionlo": 6.614463855376622,
+      "signal_regionhi": 23.961383642496575
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0008376776400682916,
+      "signal_regionlo": 9.674637349450666,
+      "signal_regionhi": 34.029138641030976
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0009426684551178855,
+      "signal_regionlo": 14.187462994476007,
+      "signal_regionhi": 48.13261473075077
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0010608183551394483,
+      "signal_regionlo": 20.778107256198286,
+      "signal_regionhi": 67.46497271532601
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0011937766417144358,
+      "signal_regionlo": 30.260287156348664,
+      "signal_regionhi": 93.19302906145055
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0013433993325989001,
+      "signal_regionlo": 43.61153560380554,
+      "signal_regionhi": 126.10717236194137
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.001511775070615663,
+      "signal_regionlo": 61.856908879122116,
+      "signal_regionhi": 166.06285659965172
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0017012542798525892,
+      "signal_regionlo": 85.80308125101942,
+      "signal_regionhi": 211.27056501513098
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0019144819761699576,
+      "signal_regionlo": 115.58287243111863,
+      "signal_regionhi": 257.65288748050443
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.002154434690031882,
+      "signal_regionlo": 150.0465016373807,
+      "signal_regionhi": 298.67306590508775
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0024244620170823282,
+      "signal_regionlo": 186.18119745491276,
+      "signal_regionhi": 326.1148257796188
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0027283333764867696,
+      "signal_regionlo": 218.90489536183327,
+      "signal_regionhi": 332.07692553795533
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00307029062975785,
+      "signal_regionlo": 241.63556133497468,
+      "signal_regionhi": 311.85413199401717
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.003455107294592218,
+      "signal_regionlo": 247.8496726676979,
+      "signal_regionhi": 266.6059415607245
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.003888155180308085,
+      "signal_regionlo": 233.39369243099156,
+      "signal_regionhi": 204.2668055978467
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.004375479375074184,
+      "signal_regionlo": 198.7627320134157,
+      "signal_regionhi": 137.57153126289936
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.004923882631706742,
+      "signal_regionlo": 150.16294380246157,
+      "signal_regionhi": 79.49779370403431
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.005541020330009492,
+      "signal_regionlo": 98.19878592054692,
+      "signal_regionhi": 38.24978310821928
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.006235507341273912,
+      "signal_regionlo": 53.91834340758369,
+      "signal_regionhi": 14.772427570712258
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.007017038286703823,
+      "signal_regionlo": 23.966291926102105,
+      "signal_regionhi": 4.384610395772843
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.007896522868499725,
+      "signal_regionlo": 8.26359344665646,
+      "signal_regionhi": 0.9508643654218516
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.008886238162743407,
+      "signal_regionlo": 2.1030925024305396,
+      "signal_regionhi": 0.14214969216088028
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.01,
+      "signal_regionlo": 0.3722182522107079,
+      "signal_regionhi": 0.013678037803453853
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0001,
+      "signal_regionlo": 0.025094433292704117,
+      "signal_regionhi": 0.12394895736491131
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00011253355826007646,
+      "signal_regionlo": 0.03079233417205437,
+      "signal_regionhi": 0.1519679589045336
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00012663801734674035,
+      "signal_regionlo": 0.03923485325960868,
+      "signal_regionhi": 0.19343315768727098
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00014251026703029977,
+      "signal_regionlo": 0.050875578002541146,
+      "signal_regionhi": 0.2504945715607931
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0001603718743751331,
+      "signal_regionlo": 0.06630113691398798,
+      "signal_regionhi": 0.32590361754372305
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00018047217668271703,
+      "signal_regionlo": 0.08634330255760604,
+      "signal_regionhi": 0.4235314721500271
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0002030917620904735,
+      "signal_regionlo": 0.11225840081069782,
+      "signal_regionhi": 0.5491923945606744
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00022854638641349906,
+      "signal_regionlo": 0.14600465080534086,
+      "signal_regionhi": 0.7118988885050819
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00025719138090593444,
+      "signal_regionlo": 0.19066170627902368,
+      "signal_regionhi": 0.9257211160252026
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0002894266124716752,
+      "signal_regionlo": 0.25105748734284344,
+      "signal_regionhi": 1.2124851027129966
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0003257020655659783,
+      "signal_regionlo": 0.3346993068572148,
+      "signal_regionhi": 1.6056269435602588
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0003665241237079626,
+      "signal_regionlo": 0.4531546992470761,
+      "signal_regionhi": 2.1556228217091093
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0004124626382901352,
+      "signal_regionlo": 0.6240986568848305,
+      "signal_regionhi": 2.9375220923460716
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00046415888336127773,
+      "signal_regionlo": 0.8743434931467665,
+      "signal_regionhi": 4.06117283067171
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0005223345074266843,
+      "signal_regionlo": 1.2442937847080806,
+      "signal_regionhi": 5.684623868427159
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0005878016072274912,
+      "signal_regionlo": 1.7944005505543517,
+      "signal_regionhi": 8.03066365886524
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0006614740641230146,
+      "signal_regionlo": 2.614259358027267,
+      "signal_regionhi": 11.405071060040086
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0007443803013251688,
+      "signal_regionlo": 3.8348493336501055,
+      "signal_regionhi": 16.212251085041547
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0008376776400682916,
+      "signal_regionlo": 5.643729715321911,
+      "signal_regionhi": 22.95879856154736
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0009426684551178855,
+      "signal_regionlo": 8.301257271195709,
+      "signal_regionhi": 32.22798174612353
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0010608183551394483,
+      "signal_regionlo": 12.15231329708805,
+      "signal_regionhi": 44.5997860233207
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0011937766417144358,
+      "signal_regionlo": 17.622011350100266,
+      "signal_regionhi": 60.48745756312156
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0013433993325989001,
+      "signal_regionlo": 25.1759324541885,
+      "signal_regionhi": 79.87325692021157
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.001511775070615663,
+      "signal_regionlo": 35.2192325085683,
+      "signal_regionhi": 101.96710220582547
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0017012542798525892,
+      "signal_regionlo": 47.91320599534098,
+      "signal_regionhi": 124.88769324842431
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0019144819761699576,
+      "signal_regionlo": 62.91536811083714,
+      "signal_regionhi": 145.55556323009603
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.002154434690031882,
+      "signal_regionlo": 79.10755264245384,
+      "signal_regionhi": 160.0291260870254
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0024244620170823282,
+      "signal_regionlo": 94.4504859809151,
+      "signal_regionhi": 164.42020675942788
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0027283333764867696,
+      "signal_regionlo": 106.14307915550468,
+      "signal_regionhi": 156.25001840199175
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00307029062975785,
+      "signal_regionlo": 111.20740311737185,
+      "signal_regionhi": 135.74070762051934
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.003455107294592218,
+      "signal_regionlo": 107.4429577223541,
+      "signal_regionhi": 106.32193317738675
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.003888155180308085,
+      "signal_regionlo": 94.45581780694053,
+      "signal_regionhi": 73.82506502176228
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.004375479375074184,
+      "signal_regionlo": 74.28614704525853,
+      "signal_regionhi": 44.484335349675334
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.004923882631706742,
+      "signal_regionlo": 51.137790992981934,
+      "signal_regionhi": 22.642021481762825
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.005541020330009492,
+      "signal_regionlo": 29.979599291646817,
+      "signal_regionhi": 9.41026010975683
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.006235507341273912,
+      "signal_regionlo": 14.479286249758673,
+      "signal_regionhi": 3.0622978296332466
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.007017038286703823,
+      "signal_regionlo": 5.543524228684653,
+      "signal_regionhi": 0.7413656584049034
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.007896522868499725,
+      "signal_regionlo": 1.6123935581755187,
+      "signal_regionhi": 0.12554099125887783
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.008886238162743407,
+      "signal_regionlo": 0.34107335118743926,
+      "signal_regionhi": 0.013821882246233477
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.01,
+      "signal_regionlo": 0.05045357231951807,
+      "signal_regionhi": 0.0009080925856072349
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0001,
+      "signal_regionlo": 0.007997526314482233,
+      "signal_regionhi": 0.04680927619293325
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.00011253355826007646,
+      "signal_regionlo": 0.010067563717263658,
+      "signal_regionhi": 0.05886488392135085
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.00012663801734674035,
+      "signal_regionlo": 0.012956457364067992,
+      "signal_regionhi": 0.07565820982749624
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.00014251026703029977,
+      "signal_regionlo": 0.016817628536870736,
+      "signal_regionhi": 0.09804459242286773
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0001603718743751331,
+      "signal_regionlo": 0.02186686300052607,
+      "signal_regionhi": 0.12721743104268643
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.00018047217668271703,
+      "signal_regionlo": 0.028427686684953803,
+      "signal_regionhi": 0.16495516690416664
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0002030917620904735,
+      "signal_regionlo": 0.037001672484704325,
+      "signal_regionhi": 0.21399881384987388
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.00022854638641349906,
+      "signal_regionlo": 0.04837501344154907,
+      "signal_regionhi": 0.2786126403814574
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.00025719138090593444,
+      "signal_regionlo": 0.06377804082514715,
+      "signal_regionhi": 0.3653997448885843
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0002894266124716752,
+      "signal_regionlo": 0.08512257437275152,
+      "signal_regionhi": 0.4844699174350854
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0003257020655659783,
+      "signal_regionlo": 0.11535449876900927,
+      "signal_regionhi": 0.6510895124092898
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0003665241237079626,
+      "signal_regionlo": 0.1589775387552883,
+      "signal_regionhi": 0.8879782530883659
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0004124626382901352,
+      "signal_regionlo": 0.22283053161670544,
+      "signal_regionhi": 1.2284422893374223
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.00046415888336127773,
+      "signal_regionlo": 0.3172348747033096,
+      "signal_regionhi": 1.7205122010589482
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0005223345074266843,
+      "signal_regionlo": 0.4576672241556472,
+      "signal_regionhi": 2.432117501404713
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0005878016072274912,
+      "signal_regionlo": 0.6671405268376294,
+      "signal_regionhi": 3.456946904790642
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0006614740641230146,
+      "signal_regionlo": 0.9794583116248439,
+      "signal_regionhi": 4.919820650126728
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0007443803013251688,
+      "signal_regionlo": 1.4433684688925341,
+      "signal_regionhi": 6.978910897163159
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0008376776400682916,
+      "signal_regionlo": 2.1272500407669774,
+      "signal_regionhi": 9.819881010366377
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0009426684551178855,
+      "signal_regionlo": 3.123121464039321,
+      "signal_regionhi": 13.63434261884746
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0010608183551394483,
+      "signal_regionlo": 4.547258050364096,
+      "signal_regionhi": 18.57338716342163
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0011937766417144358,
+      "signal_regionlo": 6.532562748151069,
+      "signal_regionhi": 24.669385542695537
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0013433993325989001,
+      "signal_regionlo": 9.205743986153273,
+      "signal_regionhi": 31.73001226523341
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.001511775070615663,
+      "signal_regionlo": 12.64231264276873,
+      "signal_regionhi": 39.230280499975784
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0017012542798525892,
+      "signal_regionlo": 16.79783334777318,
+      "signal_regionhi": 46.25712184816765
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0019144819761699576,
+      "signal_regionlo": 21.42783998516026,
+      "signal_regionhi": 51.58014616593297
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.002154434690031882,
+      "signal_regionlo": 26.0296169696893,
+      "signal_regionhi": 53.90427083041507
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0024244620170823282,
+      "signal_regionlo": 29.855645548191468,
+      "signal_regionhi": 52.28416354260624
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0027283333764867696,
+      "signal_regionlo": 32.04255848459565,
+      "signal_regionhi": 46.562503197803736
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.00307029062975785,
+      "signal_regionlo": 31.857666416910845,
+      "signal_regionhi": 37.603930108193836
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.003455107294592218,
+      "signal_regionlo": 28.997114200473682,
+      "signal_regionhi": 27.131067296100035
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.003888155180308085,
+      "signal_regionlo": 23.81042089295568,
+      "signal_regionhi": 17.161378737855216
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.004375479375074184,
+      "signal_regionlo": 17.31109221058147,
+      "signal_regionhi": 9.287772720417653
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.004923882631706742,
+      "signal_regionlo": 10.885287793575147,
+      "signal_regionhi": 4.167629724852536
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.005541020330009492,
+      "signal_regionlo": 5.757342750718572,
+      "signal_regionhi": 1.4899187356212145
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.006235507341273912,
+      "signal_regionlo": 2.487591326827694,
+      "signal_regionhi": 0.40382869839999025
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.007017038286703823,
+      "signal_regionlo": 0.8610068404537339,
+      "signal_regionhi": 0.07810125733198885
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.007896522868499725,
+      "signal_regionlo": 0.24518848229110657,
+      "signal_regionhi": 0.010022651155595294
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.008886238162743407,
+      "signal_regionlo": 0.06670124394034505,
+      "signal_regionhi": 0.0007845885567938273
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.01,
+      "signal_regionlo": 0.021049704513509522,
+      "signal_regionhi": 3.4077001057963774e-05
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0001,
+      "signal_regionlo": 0.002489007273772283,
+      "signal_regionhi": 0.015443431526423508
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.00011253355826007646,
+      "signal_regionlo": 0.0032221187346634242,
+      "signal_regionhi": 0.01996737246017221
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.00012663801734674035,
+      "signal_regionlo": 0.004186439730530547,
+      "signal_regionhi": 0.025902603363938927
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.00014251026703029977,
+      "signal_regionlo": 0.005435132554902311,
+      "signal_regionhi": 0.033562004571158766
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0001603718743751331,
+      "signal_regionlo": 0.007048308901916267,
+      "signal_regionhi": 0.04341448953252412
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.00018047217668271703,
+      "signal_regionlo": 0.00915026119965016,
+      "signal_regionhi": 0.05618351254403405
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0002030917620904735,
+      "signal_regionlo": 0.011935533567697056,
+      "signal_regionhi": 0.07299316998645879
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.00022854638641349906,
+      "signal_regionlo": 0.015707909787393448,
+      "signal_regionhi": 0.09558072632373098
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.00025719138090593444,
+      "signal_regionlo": 0.020938407231524344,
+      "signal_regionhi": 0.12660126423495233
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0002894266124716752,
+      "signal_regionlo": 0.028351437991601922,
+      "signal_regionhi": 0.17005895109830416
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0003257020655659783,
+      "signal_regionlo": 0.03905289046544608,
+      "signal_regionhi": 0.2319093573505338
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0003665241237079626,
+      "signal_regionlo": 0.05472047465002303,
+      "signal_regionhi": 0.32088525189295813
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0004124626382901352,
+      "signal_regionlo": 0.07788550029651958,
+      "signal_regionhi": 0.4495962747161506
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.00046415888336127773,
+      "signal_regionlo": 0.1123456897917893,
+      "signal_regionhi": 0.6359236329140956
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0005223345074266843,
+      "signal_regionlo": 0.16375785435998938,
+      "signal_regionhi": 0.9046427926070435
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0005878016072274912,
+      "signal_regionlo": 0.24045980393166239,
+      "signal_regionhi": 1.2890102354726172
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0006614740641230146,
+      "signal_regionlo": 0.3545464320860456,
+      "signal_regionhi": 1.8316827517992254
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0007443803013251688,
+      "signal_regionlo": 0.5231448487176249,
+      "signal_regionhi": 2.5837573859448097
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0008376776400682916,
+      "signal_regionlo": 0.7696488200826164,
+      "signal_regionhi": 3.5999878758983375
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0009426684551178855,
+      "signal_regionlo": 1.1243248092522087,
+      "signal_regionhi": 4.927662329304514
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0010608183551394483,
+      "signal_regionlo": 1.6231639620500755,
+      "signal_regionhi": 6.586944495742145
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0011937766417144358,
+      "signal_regionlo": 2.30323468936118,
+      "signal_regionhi": 8.542798029331523
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0013433993325989001,
+      "signal_regionlo": 3.192496171719766,
+      "signal_regionhi": 10.673867525278013
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.001511775070615663,
+      "signal_regionlo": 4.292886803879675,
+      "signal_regionhi": 12.751383314054587
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0017012542798525892,
+      "signal_regionlo": 5.558484805773606,
+      "signal_regionhi": 14.447777221685328
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0019144819761699576,
+      "signal_regionlo": 6.875804650815077,
+      "signal_regionhi": 15.393319488160724
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.002154434690031882,
+      "signal_regionlo": 8.058806654982932,
+      "signal_regionhi": 15.282531518525278
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0024244620170823282,
+      "signal_regionlo": 8.872389428642553,
+      "signal_regionhi": 14.000503281754495
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0027283333764867696,
+      "signal_regionlo": 9.090159902834838,
+      "signal_regionhi": 11.708431498963307
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.00307029062975785,
+      "signal_regionlo": 8.574994867976649,
+      "signal_regionhi": 8.827552202040485
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.003455107294592218,
+      "signal_regionlo": 7.352255699835778,
+      "signal_regionhi": 5.908454919007045
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.003888155180308085,
+      "signal_regionlo": 5.636977813453781,
+      "signal_regionhi": 3.4413731159550824
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.004375479375074184,
+      "signal_regionlo": 3.7851286003444127,
+      "signal_regionhi": 1.6993490487355303
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.004923882631706742,
+      "signal_regionlo": 2.169065814564705,
+      "signal_regionhi": 0.6880841412561032
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.005541020330009492,
+      "signal_regionlo": 1.0284625458045729,
+      "signal_regionhi": 0.2193112595438945
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.006235507341273912,
+      "signal_regionlo": 0.3896168919690794,
+      "signal_regionhi": 0.05252507431468098
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.007017038286703823,
+      "signal_regionlo": 0.1136657525947129,
+      "signal_regionhi": 0.0090514092302005
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.007896522868499725,
+      "signal_regionlo": 0.024670011362819145,
+      "signal_regionhi": 0.001104861832079959
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.008886238162743407,
+      "signal_regionlo": 0.0038805065107534674,
+      "signal_regionhi": 9.964743972440481e-05
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.01,
+      "signal_regionlo": 0.0004344333396073103,
+      "signal_regionhi": 6.801721873246516e-06
+    }
+  ]
+}

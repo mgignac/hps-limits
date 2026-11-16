@@ -1,0 +1,44 @@
+# HPS Limits — SIMP z0 shape fit, L1L1 + L1L2 + L2L2, from the majd/ signals
+#
+# Loads the rederived signals from data/rory-latest/majd/ (one file per hit
+# category, z0 bins lo/hi) against the 10% background estimate for each category
+# (results_{cat}_bin{1,2}.json, nominal bkg_est + real n_a_obs, no projection).
+# Mirrors the SIMP 10% result setup (config_z0.yaml); combined + per-region.
+#
+#   python3.9 scripts/run_limits.py --config examples/config_z0_l1l1_majd.yaml
+
+label: "HPS SIMPs (majd, L1L1+L1L2+L2L2)"
+mode: z0
+
+output_dir: ../plots/simp_10pc_majd
+
+# ── Signal inputs (one file per hit category) ─────────────────────────────────
+z0_files:
+  - ../data/rory-latest/majd/results_isL1L1_projSig_2.8000_10percent.json
+  - ../data/rory-latest/majd/results_isL1L2_projSig_2.8000_10percent.json
+  - ../data/rory-latest/majd/results_isL2L2_projSig_2.8000_10percent.json
+
+# ── Background: 10% estimate for the three categories ─────────────────────────
+background_jsons:
+  - ../data/rory-latest/results_L1L1_bin*.json
+  - ../data/rory-latest/results_L1L2_bin*.json
+  - ../data/rory-latest/results_L2L2_bin*.json
+background_projection: null          # nominal bkg_est + real n_a_obs (10%)
+
+# ── Analysis options ──────────────────────────────────────────────────────────
+simps: true          # ε axis (SIMP coupling)
+per_region: true     # combined (L1L1+L1L2+L2L2) plus each category individually
+run_cls: true
+run_mu: true
+mu_cap: 10000.0
+cl_level: 0.90
+
+# ── Background systematics (ABCD method) ──────────────────────────────────────
+background_systematics:
+  file: ../data/rory-latest/background_systematics.json
+  treatment: expected_band
+  mode: components
+
+bkg_zero_floor: false
+summary_plot: true
+prior_exclusions: []

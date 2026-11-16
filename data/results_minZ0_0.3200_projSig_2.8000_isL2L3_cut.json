@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "suffix": "isL2L3_cut",
+    "Val": 16,
+    "Val2": 7,
+    "min_z0_cut": 0.32,
+    "proj_sig_cut": 2.8,
+    "description": "Signal and background yields for events passing the stated min z0 cut (= 0.5 * Val / 25) and proj sig cut (= 4.0 * Val2 / 10). Each entry gives mass_MeV, epsilon, signal (floor of S_yield), background (B_yield), and Zbi at that grid point."
+  },
+  "n_points": 21,
+  "data": [
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00151991108,
+      "signal": 5,
+      "background": 1965.978,
+      "Zbi": 0.069917
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00284803587,
+      "signal": 14,
+      "background": 1965.978,
+      "Zbi": 0.21075
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00533669923,
+      "signal": 6,
+      "background": 1965.978,
+      "Zbi": 0.09332
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.000811130831,
+      "signal": 8,
+      "background": 2974.394,
+      "Zbi": 0.095087
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00151991108,
+      "signal": 36,
+      "background": 2974.394,
+      "Zbi": 0.461307
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00284803587,
+      "signal": 40,
+      "background": 2974.394,
+      "Zbi": 0.504486
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00533669923,
+      "signal": 5,
+      "background": 2974.394,
+      "Zbi": 0.058288
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.000432876128,
+      "signal": 1,
+      "background": 2022.953,
+      "Zbi": 0.011978
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.000811130831,
+      "signal": 12,
+      "background": 2022.953,
+      "Zbi": 0.17936
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00151991108,
+      "signal": 34,
+      "background": 2022.953,
+      "Zbi": 0.518569
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00284803587,
+      "signal": 14,
+      "background": 2022.953,
+      "Zbi": 0.218027
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.000432876128,
+      "signal": 1,
+      "background": 198.715,
+      "Zbi": 0.027498
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.000811130831,
+      "signal": 8,
+      "background": 198.715,
+      "Zbi": 0.364476
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00151991108,
+      "signal": 12,
+      "background": 198.715,
+      "Zbi": 0.572487
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00284803587,
+      "signal": 2,
+      "background": 198.715,
+      "Zbi": 0.071278
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.000432876128,
+      "signal": 1,
+      "background": 398.9283,
+      "Zbi": 0.020731
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.000811130831,
+      "signal": 6,
+      "background": 398.9283,
+      "Zbi": 0.195113
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00151991108,
+      "signal": 5,
+      "background": 398.9283,
+      "Zbi": 0.170581
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.000811130831,
+      "signal": 2,
+      "background": 0.0,
+      "Zbi": -1.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00151991108,
+      "signal": 1,
+      "background": 0.0,
+      "Zbi": -1.0
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.000811130831,
+      "signal": 1,
+      "background": 0.0,
+      "Zbi": -1.0
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+# HPS Limits — z0-binned shape-fit configuration, scaled to 100% luminosity
+#
+# Derived from config_z0.yaml.  Background predictions, observations, and
+# signal are all scaled by the integrated-luminosity ratio
+#   161.799 / 18.0109 = 8.983393389558545
+# to project the unblinded partial dataset to the full dataset.
+#
+# Paths are relative to this file's directory.
+# Run with:
+#   python3.9 scripts/run_limits.py --config examples/config_z0_100pct.yaml
+
+label: "HPS SIMPs (100% lumi)"   # used in plot titles and output filename prefix
+mode: z0                          # "z0" or "classic"
+
+output_dir: ../plots/simp_100pc
+
+# ── Signal inputs ─────────────────────────────────────────────────────────────
+z0_files:
+  - ../data/rory-latest/results_isL1L1_cut_projSig_2.8000.json
+  - ../data/rory-latest/results_isL1L2_cut_projSig_2.8000.json
+  - ../data/rory-latest/results_isL2L2_cut_projSig_2.8000.json
+  - ../data/rory-latest/results_isL2L3_cut_projSig_2.8000.json
+
+# ── Background inputs ─────────────────────────────────────────────────────────
+# Unblinded real data; flat luminosity scaling is applied via background_scale.
+background_jsons:
+  - ../data/rory-latest/results_*_bin*.json
+background_projection: null
+
+# ── Luminosity scaling (161.799 / 18.0109) ────────────────────────────────────
+signal_scale:     8.983393389558545   # scale signal yields
+background_scale: 8.983393389558545   # scale background predictions + observations
+
+# ── Analysis options ──────────────────────────────────────────────────────────
+simps: true          # true → ε axis (SIMPs coupling); false → ε² axis
+per_region: true     # run each hit category individually as well as combined
+run_cls: true        # CLs island-of-exclusion scan
+run_mu: true         # μ upper-limit scan (slower; set false to skip)
+mu_cap: 10000.0      # cap on reported μ upper limit (also controls early stopping)
+cl_level: 0.90       # confidence level (0.90 = 90% CL)
+
+# ── Background systematics (ABCD method) ──────────────────────────────────────
+# Fractional ABCD uncertainties (relative → unaffected by the luminosity scale).
+# treatment / mode: see config_z0.yaml for full details.  Kept identical to the
+# 10% config so the two runs differ only by the luminosity scaling.
+background_systematics:
+  file: ../data/rory-latest/background_systematics.json
+  treatment: expected_band
+  mode: components
+
+# ── Systematic studies ────────────────────────────────────────────────────────
+bkg_zero_floor: false
+
+# ── Summary exclusion plot ────────────────────────────────────────────────────
+summary_plot: true
+prior_exclusions: []

@@ -1,0 +1,48 @@
+# HPS Limits — A′ L1L1+L1L2+L2L2, rmng_bkg=0, 10%, ZERO background, BOOSTED signal
+#
+# Clone of config_ap_rmng_bkg_0_10pc_zerobkg.yaml with the signal yield increased
+# per hit category (L1L1 ×1.40, L1L2 ×1.50, L2L2 ×1.45) to study the effect of a
+# higher-efficiency selection.  Unique output directory.
+#
+#   python3.9 scripts/run_limits.py --config examples/config_ap_rmng_bkg_0_10pc_zerobkg_boosted.yaml
+
+label: "HPS A' (rmng_bkg=0, 10%, zero bkg, boosted)"
+mode: classic
+signal_format: ap_displaced
+
+output_dir: ../plots/ap_rmng_bkg_0_10pc_zerobkg_boosted
+
+signal_jsons:
+  - file:   ../data/sarah-latest/rmng_bkg_0/ap_displaced_yield__l1l1_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L1L1
+  - file:   ../data/sarah-latest/rmng_bkg_0/ap_displaced_yield__l1l2_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L1L2
+  - file:   ../data/sarah-latest/rmng_bkg_0/ap_displaced_yield__l2l2_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L2L2
+
+# No background_json — zero-background assumption below.
+
+simps: false
+per_region: true
+run_cls: false
+run_mu: true
+mu_cap: 10000.0
+cl_level: 0.90
+
+zero_background: true               # ideal zero-background limit
+signal_scale: 1.0                   # 10%
+# Per-category signal-yield increase (hypothetical higher-efficiency selection)
+signal_scale_by_region:
+  L1L1: 1.40
+  L1L2: 1.50
+  L2L2: 1.45
+
+# ROOT-style μ 2D map: annotations + y-axis
+experiment_label: "HPS work in progress"
+lumi_label: "18.01 pb$^{-1}$ @ 3.74 GeV"
+y_max: 8.0e-8
+plot_format: pdf
+
+bkg_zero_floor: false
+summary_plot: false
+prior_exclusions: []

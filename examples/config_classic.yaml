@@ -1,0 +1,47 @@
+# HPS Limits — classic ABCD background + cut-scan signal configuration
+#
+# Paths are relative to this file's directory.
+# Run with:
+#   python3.9 scripts/run_limits.py --config examples/config_classic.yaml
+
+label: "HPS"    # used in plot titles and output filename prefix
+mode: classic   # "z0" or "classic"
+
+output_dir: ../plots
+
+# ── Inputs ────────────────────────────────────────────────────────────────────
+# Background: combined ABCD results JSON produced by the background estimator.
+background_json: ../data/simps_tight_0p3.json
+
+# Projection key inside each mass-point entry's "projections" dict.
+# Set to null (or omit) to use the raw bkg_est / n_a_obs fields directly.
+background_projection: "100% projection"
+
+# Signal: one or more cut-scan JSON files (one per hit category).
+# Glob patterns are supported.
+signal_files:
+  - ../data/results_minZ0_0.3200_projSig_2.8000_isL1L1_cut.json
+  - ../data/results_minZ0_0.3200_projSig_2.8000_isL1L2_cut.json
+  - ../data/results_minZ0_0.3200_projSig_2.8000_isL2L2_cut.json
+  - ../data/results_minZ0_0.3200_projSig_2.8000_isL2L3_cut.json
+  - ../data/results_minZ0_0.3200_projSig_2.8000_isL3L3_cut.json
+
+# ── Analysis options ──────────────────────────────────────────────────────────
+simps: true          # true → ε axis (SIMPs coupling); false → ε² axis
+per_region: true     # run each hit category individually as well as combined
+run_cls: true        # CLs island-of-exclusion scan
+run_mu: true         # μ upper-limit scan (slower; set false to skip)
+mu_cap: 10000.0      # cap on reported μ upper limit
+
+# ── Systematic studies ────────────────────────────────────────────────────────
+# Set to true to replace near-zero projected backgrounds with 100 events.
+# Output filenames get a "_bkgfloor100" suffix so results don't overwrite nominal.
+bkg_zero_floor: false
+
+# ── Summary exclusion plot ────────────────────────────────────────────────────
+summary_plot: false
+prior_exclusions: []
+#  - label: "Previous result"
+#    file:  ../data/prior_exclusion.txt
+#    color: "tab:blue"
+#    linestyle: "--"

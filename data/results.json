@@ -1,0 +1,1955 @@
+{
+  "meta": {
+    "plot_name": "abcd",
+    "luminosity_pb": 1.6693840000000006,
+    "z_variable": "min_y0",
+    "z_signal": [
+      0.24,
+      1000000000.0
+    ],
+    "z_control": [
+      0.0,
+      0.24
+    ],
+    "z_bins": [
+      0.24,
+      0.38,
+      0.48
+    ],
+    "sr_sigmas": 1.5,
+    "gap_sigmas": 0.5,
+    "sb_sigmas": 3.5
+  },
+  "regions": {
+    "L1L1": [
+      {
+        "mass_GeV": 0.075,
+        "resolution_GeV": 0.00229,
+        "signal_window_GeV": 0.003435,
+        "sideband_gap_GeV": 0.001145,
+        "sideband_width_GeV": 0.008015,
+        "n_a_obs": 37.0,
+        "n_a_obs_err": 6.0828,
+        "bkg_est": 36.2041,
+        "bkg_est_err": 3.9743,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 362.0411,
+            "bkg_est_err": 39.7429
+          },
+          "100% projection": {
+            "bkg_est": 3620.4106,
+            "bkg_est_err": 397.4285
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 36.0,
+            "n_c": 79.0,
+            "bkg_est": 34.4593,
+            "bkg_est_err": 3.8773
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 3.0,
+            "bkg_est": 1.3086,
+            "bkg_est_err": 0.7555
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 1.0,
+            "n_c": 1.0,
+            "bkg_est": 0.4362,
+            "bkg_est_err": 0.4362
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.1,
+        "resolution_GeV": 0.002557,
+        "signal_window_GeV": 0.003835,
+        "sideband_gap_GeV": 0.001278,
+        "sideband_width_GeV": 0.008949,
+        "n_a_obs": 9.0,
+        "n_a_obs_err": 3.0,
+        "bkg_est": 11.7699,
+        "bkg_est_err": 2.2244,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 117.6988,
+            "bkg_est_err": 22.2441
+          },
+          "100% projection": {
+            "bkg_est": 1176.9885,
+            "bkg_est_err": 222.4409
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 8.0,
+            "n_c": 27.0,
+            "bkg_est": 11.3495,
+            "bkg_est_err": 2.1843
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 1.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.4204,
+            "bkg_est_err": 0.4204
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.125,
+        "resolution_GeV": 0.002995,
+        "signal_window_GeV": 0.004493,
+        "sideband_gap_GeV": 0.001498,
+        "sideband_width_GeV": 0.010483,
+        "n_a_obs": 2.0,
+        "n_a_obs_err": 1.4142,
+        "bkg_est": 3.2132,
+        "bkg_est_err": 1.1361,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 32.1317,
+            "bkg_est_err": 11.3606
+          },
+          "100% projection": {
+            "bkg_est": 321.3166,
+            "bkg_est_err": 113.6056
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 2.0,
+            "n_c": 7.0,
+            "bkg_est": 2.8115,
+            "bkg_est_err": 1.0627
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.4016,
+            "bkg_est_err": 0.4016
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.15,
+        "resolution_GeV": 0.003604,
+        "signal_window_GeV": 0.005407,
+        "sideband_gap_GeV": 0.001802,
+        "sideband_width_GeV": 0.012615,
+        "n_a_obs": 1.0,
+        "n_a_obs_err": 1.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 1.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.175,
+        "resolution_GeV": 0.004385,
+        "signal_window_GeV": 0.006578,
+        "sideband_gap_GeV": 0.002193,
+        "sideband_width_GeV": 0.015348,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.2,
+        "resolution_GeV": 0.005337,
+        "signal_window_GeV": 0.008005,
+        "sideband_gap_GeV": 0.002668,
+        "sideband_width_GeV": 0.018679,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.225,
+        "resolution_GeV": 0.00646,
+        "signal_window_GeV": 0.00969,
+        "sideband_gap_GeV": 0.00323,
+        "sideband_width_GeV": 0.02261,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.25,
+        "resolution_GeV": 0.007754,
+        "signal_window_GeV": 0.011632,
+        "sideband_gap_GeV": 0.003877,
+        "sideband_width_GeV": 0.02714,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      }
+    ],
+    "L2L2": [
+      {
+        "mass_GeV": 0.075,
+        "resolution_GeV": 0.002258,
+        "signal_window_GeV": 0.003388,
+        "sideband_gap_GeV": 0.001129,
+        "sideband_width_GeV": 0.007905,
+        "n_a_obs": 29.0,
+        "n_a_obs_err": 5.3852,
+        "bkg_est": 32.8004,
+        "bkg_est_err": 3.6058,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 328.0036,
+            "bkg_est_err": 36.0575
+          },
+          "100% projection": {
+            "bkg_est": 3280.0357,
+            "bkg_est_err": 360.5751
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 21.0,
+            "n_c": 72.0,
+            "bkg_est": 28.4533,
+            "bkg_est_err": 3.3577
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 7.0,
+            "n_c": 6.0,
+            "bkg_est": 2.3711,
+            "bkg_est_err": 0.9681
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 1.0,
+            "n_c": 5.0,
+            "bkg_est": 1.9759,
+            "bkg_est_err": 0.8837
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.1,
+        "resolution_GeV": 0.002577,
+        "signal_window_GeV": 0.003866,
+        "sideband_gap_GeV": 0.001289,
+        "sideband_width_GeV": 0.00902,
+        "n_a_obs": 10.0,
+        "n_a_obs_err": 3.1623,
+        "bkg_est": 8.0451,
+        "bkg_est_err": 1.7575,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 80.4513,
+            "bkg_est_err": 17.5752
+          },
+          "100% projection": {
+            "bkg_est": 804.5127,
+            "bkg_est_err": 175.7516
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 9.0,
+            "n_c": 16.0,
+            "bkg_est": 6.1296,
+            "bkg_est_err": 1.5337
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 1.0,
+            "n_c": 4.0,
+            "bkg_est": 1.5324,
+            "bkg_est_err": 0.7664
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.3831,
+            "bkg_est_err": 0.3831
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.125,
+        "resolution_GeV": 0.003033,
+        "signal_window_GeV": 0.00455,
+        "sideband_gap_GeV": 0.001517,
+        "sideband_width_GeV": 0.010617,
+        "n_a_obs": 4.0,
+        "n_a_obs_err": 2.0,
+        "bkg_est": 1.8394,
+        "bkg_est_err": 0.8232,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 18.3942,
+            "bkg_est_err": 8.2321
+          },
+          "100% projection": {
+            "bkg_est": 183.9421,
+            "bkg_est_err": 82.3209
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 4.0,
+            "n_c": 4.0,
+            "bkg_est": 1.4715,
+            "bkg_est_err": 0.7362
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.3679,
+            "bkg_est_err": 0.3679
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.15,
+        "resolution_GeV": 0.003627,
+        "signal_window_GeV": 0.005441,
+        "sideband_gap_GeV": 0.001814,
+        "sideband_width_GeV": 0.012695,
+        "n_a_obs": 1.0,
+        "n_a_obs_err": 1.0,
+        "bkg_est": 1.4667,
+        "bkg_est_err": 0.7345,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 14.6675,
+            "bkg_est_err": 7.3448
+          },
+          "100% projection": {
+            "bkg_est": 146.6748,
+            "bkg_est_err": 73.4478
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 1.0,
+            "n_c": 3.0,
+            "bkg_est": 1.1001,
+            "bkg_est_err": 0.6358
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.3667,
+            "bkg_est_err": 0.3668
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.175,
+        "resolution_GeV": 0.004358,
+        "signal_window_GeV": 0.006538,
+        "sideband_gap_GeV": 0.002179,
+        "sideband_width_GeV": 0.015255,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.334,
+        "bkg_est_err": 0.3343,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 3.3396,
+            "bkg_est_err": 3.3427
+          },
+          "100% projection": {
+            "bkg_est": 33.3955,
+            "bkg_est_err": 33.4266
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.334,
+            "bkg_est_err": 0.3343
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.2,
+        "resolution_GeV": 0.005227,
+        "signal_window_GeV": 0.007841,
+        "sideband_gap_GeV": 0.002614,
+        "sideband_width_GeV": 0.018295,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.225,
+        "resolution_GeV": 0.006233,
+        "signal_window_GeV": 0.00935,
+        "sideband_gap_GeV": 0.003117,
+        "sideband_width_GeV": 0.021817,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.25,
+        "resolution_GeV": 0.007377,
+        "signal_window_GeV": 0.011066,
+        "sideband_gap_GeV": 0.003689,
+        "sideband_width_GeV": 0.02582,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      }
+    ],
+    "L3L3": [
+      {
+        "mass_GeV": 0.075,
+        "resolution_GeV": 0.002839,
+        "signal_window_GeV": 0.004258,
+        "sideband_gap_GeV": 0.001419,
+        "sideband_width_GeV": 0.009936,
+        "n_a_obs": 2.0,
+        "n_a_obs_err": 1.4142,
+        "bkg_est": 6.4918,
+        "bkg_est_err": 1.6182,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 64.9176,
+            "bkg_est_err": 16.1822
+          },
+          "100% projection": {
+            "bkg_est": 649.1758,
+            "bkg_est_err": 161.8224
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 1.0,
+            "n_c": 13.0,
+            "bkg_est": 4.9643,
+            "bkg_est_err": 1.4062
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.3819,
+            "bkg_est_err": 0.3825
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 1.0,
+            "n_c": 3.0,
+            "bkg_est": 1.1456,
+            "bkg_est_err": 0.6647
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.1,
+        "resolution_GeV": 0.003353,
+        "signal_window_GeV": 0.005029,
+        "sideband_gap_GeV": 0.001676,
+        "sideband_width_GeV": 0.011734,
+        "n_a_obs": 1.0,
+        "n_a_obs_err": 1.0,
+        "bkg_est": 3.0207,
+        "bkg_est_err": 1.0945,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 30.2069,
+            "bkg_est_err": 10.9452
+          },
+          "100% projection": {
+            "bkg_est": 302.069,
+            "bkg_est_err": 109.4517
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 1.0,
+            "n_c": 7.0,
+            "bkg_est": 2.6431,
+            "bkg_est_err": 1.0208
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.3776,
+            "bkg_est_err": 0.3788
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.125,
+        "resolution_GeV": 0.004054,
+        "signal_window_GeV": 0.006081,
+        "sideband_gap_GeV": 0.002027,
+        "sideband_width_GeV": 0.014189,
+        "n_a_obs": 3.0,
+        "n_a_obs_err": 1.7321,
+        "bkg_est": 0.6029,
+        "bkg_est_err": 0.4331,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 6.0294,
+            "bkg_est_err": 4.3306
+          },
+          "100% projection": {
+            "bkg_est": 60.2941,
+            "bkg_est_err": 43.3058
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 2.0,
+            "n_c": 2.0,
+            "bkg_est": 0.6029,
+            "bkg_est_err": 0.4331
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 1.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.15,
+        "resolution_GeV": 0.004943,
+        "signal_window_GeV": 0.007414,
+        "sideband_gap_GeV": 0.002471,
+        "sideband_width_GeV": 0.017299,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.3333,
+        "bkg_est_err": 0.3381,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 3.3333,
+            "bkg_est_err": 3.3813
+          },
+          "100% projection": {
+            "bkg_est": 33.3333,
+            "bkg_est_err": 33.813
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.3333,
+            "bkg_est_err": 0.3381
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.175,
+        "resolution_GeV": 0.006019,
+        "signal_window_GeV": 0.009028,
+        "sideband_gap_GeV": 0.003009,
+        "sideband_width_GeV": 0.021066,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.2,
+        "resolution_GeV": 0.007283,
+        "signal_window_GeV": 0.010924,
+        "sideband_gap_GeV": 0.003641,
+        "sideband_width_GeV": 0.025489,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.225,
+        "resolution_GeV": 0.008734,
+        "signal_window_GeV": 0.013101,
+        "sideband_gap_GeV": 0.004367,
+        "sideband_width_GeV": 0.030569,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.25,
+        "resolution_GeV": 0.010373,
+        "signal_window_GeV": 0.015559,
+        "sideband_gap_GeV": 0.005186,
+        "sideband_width_GeV": 0.036304,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      }
+    ],
+    "L1L2": [
+      {
+        "mass_GeV": 0.075,
+        "resolution_GeV": 0.002255,
+        "signal_window_GeV": 0.003383,
+        "sideband_gap_GeV": 0.001128,
+        "sideband_width_GeV": 0.007893,
+        "n_a_obs": 51.0,
+        "n_a_obs_err": 7.1414,
+        "bkg_est": 59.4791,
+        "bkg_est_err": 5.0105,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 594.791,
+            "bkg_est_err": 50.105
+          },
+          "100% projection": {
+            "bkg_est": 5947.9097,
+            "bkg_est_err": 501.0497
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 41.0,
+            "n_c": 131.0,
+            "bkg_est": 55.2607,
+            "bkg_est_err": 4.8295
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 8.0,
+            "n_c": 8.0,
+            "bkg_est": 3.3747,
+            "bkg_est_err": 1.1932
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 2.0,
+            "n_c": 2.0,
+            "bkg_est": 0.8437,
+            "bkg_est_err": 0.5966
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.1,
+        "resolution_GeV": 0.002624,
+        "signal_window_GeV": 0.003936,
+        "sideband_gap_GeV": 0.001312,
+        "sideband_width_GeV": 0.009184,
+        "n_a_obs": 7.0,
+        "n_a_obs_err": 2.6458,
+        "bkg_est": 13.3553,
+        "bkg_est_err": 2.3252,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 133.5531,
+            "bkg_est_err": 23.2518
+          },
+          "100% projection": {
+            "bkg_est": 1335.5313,
+            "bkg_est_err": 232.5181
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 6.0,
+            "n_c": 31.0,
+            "bkg_est": 12.5459,
+            "bkg_est_err": 2.2536
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 2.0,
+            "bkg_est": 0.8094,
+            "bkg_est_err": 0.5723
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 1.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.125,
+        "resolution_GeV": 0.003102,
+        "signal_window_GeV": 0.004653,
+        "sideband_gap_GeV": 0.001551,
+        "sideband_width_GeV": 0.010857,
+        "n_a_obs": 4.0,
+        "n_a_obs_err": 2.0,
+        "bkg_est": 3.8346,
+        "bkg_est_err": 1.2127,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 38.3458,
+            "bkg_est_err": 12.1272
+          },
+          "100% projection": {
+            "bkg_est": 383.4578,
+            "bkg_est_err": 121.2717
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 4.0,
+            "n_c": 9.0,
+            "bkg_est": 3.4511,
+            "bkg_est_err": 1.1505
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.3835,
+            "bkg_est_err": 0.3835
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.15,
+        "resolution_GeV": 0.003689,
+        "signal_window_GeV": 0.005534,
+        "sideband_gap_GeV": 0.001845,
+        "sideband_width_GeV": 0.012912,
+        "n_a_obs": 2.0,
+        "n_a_obs_err": 1.4142,
+        "bkg_est": 2.1903,
+        "bkg_est_err": 0.8943,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 21.9027,
+            "bkg_est_err": 8.943
+          },
+          "100% projection": {
+            "bkg_est": 219.0268,
+            "bkg_est_err": 89.4297
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 2.0,
+            "n_c": 5.0,
+            "bkg_est": 1.8252,
+            "bkg_est_err": 0.8164
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.365,
+            "bkg_est_err": 0.3651
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.175,
+        "resolution_GeV": 0.004385,
+        "signal_window_GeV": 0.006578,
+        "sideband_gap_GeV": 0.002193,
+        "sideband_width_GeV": 0.015348,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.3418,
+        "bkg_est_err": 0.3418,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 3.4178,
+            "bkg_est_err": 3.4179
+          },
+          "100% projection": {
+            "bkg_est": 34.1776,
+            "bkg_est_err": 34.1795
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.3418,
+            "bkg_est_err": 0.3418
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.2,
+        "resolution_GeV": 0.00519,
+        "signal_window_GeV": 0.007785,
+        "sideband_gap_GeV": 0.002595,
+        "sideband_width_GeV": 0.018165,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.225,
+        "resolution_GeV": 0.006104,
+        "signal_window_GeV": 0.009156,
+        "sideband_gap_GeV": 0.003052,
+        "sideband_width_GeV": 0.021364,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.25,
+        "resolution_GeV": 0.007127,
+        "signal_window_GeV": 0.010691,
+        "sideband_gap_GeV": 0.003564,
+        "sideband_width_GeV": 0.024945,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      }
+    ],
+    "L2L3": [
+      {
+        "mass_GeV": 0.075,
+        "resolution_GeV": 0.002743,
+        "signal_window_GeV": 0.004114,
+        "sideband_gap_GeV": 0.001371,
+        "sideband_width_GeV": 0.0096,
+        "n_a_obs": 24.0,
+        "n_a_obs_err": 4.899,
+        "bkg_est": 22.2675,
+        "bkg_est_err": 2.9637,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 222.6746,
+            "bkg_est_err": 29.6373
+          },
+          "100% projection": {
+            "bkg_est": 2226.7464,
+            "bkg_est_err": 296.3729
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 19.0,
+            "n_c": 50.0,
+            "bkg_est": 19.5329,
+            "bkg_est_err": 2.7741
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 4.0,
+            "n_c": 5.0,
+            "bkg_est": 1.9533,
+            "bkg_est_err": 0.8739
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 1.0,
+            "n_c": 2.0,
+            "bkg_est": 0.7813,
+            "bkg_est_err": 0.5526
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.1,
+        "resolution_GeV": 0.002909,
+        "signal_window_GeV": 0.004363,
+        "sideband_gap_GeV": 0.001454,
+        "sideband_width_GeV": 0.01018,
+        "n_a_obs": 4.0,
+        "n_a_obs_err": 2.0,
+        "bkg_est": 6.6901,
+        "bkg_est_err": 1.6289,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 66.9007,
+            "bkg_est_err": 16.2886
+          },
+          "100% projection": {
+            "bkg_est": 669.0068,
+            "bkg_est_err": 162.8859
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 4.0,
+            "n_c": 13.0,
+            "bkg_est": 5.1159,
+            "bkg_est_err": 1.4231
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 2.0,
+            "bkg_est": 0.7871,
+            "bkg_est_err": 0.5568
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 2.0,
+            "bkg_est": 0.7871,
+            "bkg_est_err": 0.5568
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.125,
+        "resolution_GeV": 0.003328,
+        "signal_window_GeV": 0.004992,
+        "sideband_gap_GeV": 0.001664,
+        "sideband_width_GeV": 0.011648,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 2.2189,
+        "bkg_est_err": 0.9091,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 22.1886,
+            "bkg_est_err": 9.0908
+          },
+          "100% projection": {
+            "bkg_est": 221.8861,
+            "bkg_est_err": 90.908
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 4.0,
+            "bkg_est": 1.4792,
+            "bkg_est_err": 0.7414
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.3698,
+            "bkg_est_err": 0.37
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.3698,
+            "bkg_est_err": 0.37
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.15,
+        "resolution_GeV": 0.004001,
+        "signal_window_GeV": 0.006002,
+        "sideband_gap_GeV": 0.002001,
+        "sideband_width_GeV": 0.014004,
+        "n_a_obs": 2.0,
+        "n_a_obs_err": 1.4142,
+        "bkg_est": 0.3623,
+        "bkg_est_err": 0.3629,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 3.6232,
+            "bkg_est_err": 3.6287
+          },
+          "100% projection": {
+            "bkg_est": 36.2319,
+            "bkg_est_err": 36.2867
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 2.0,
+            "n_c": 1.0,
+            "bkg_est": 0.3623,
+            "bkg_est_err": 0.3629
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.175,
+        "resolution_GeV": 0.004928,
+        "signal_window_GeV": 0.007392,
+        "sideband_gap_GeV": 0.002464,
+        "sideband_width_GeV": 0.017248,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.324,
+        "bkg_est_err": 0.3252,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 3.2404,
+            "bkg_est_err": 3.2519
+          },
+          "100% projection": {
+            "bkg_est": 32.4042,
+            "bkg_est_err": 32.5193
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 1.0,
+            "bkg_est": 0.324,
+            "bkg_est_err": 0.3252
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.2,
+        "resolution_GeV": 0.006109,
+        "signal_window_GeV": 0.009163,
+        "sideband_gap_GeV": 0.003054,
+        "sideband_width_GeV": 0.02138,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.225,
+        "resolution_GeV": 0.007543,
+        "signal_window_GeV": 0.011314,
+        "sideband_gap_GeV": 0.003771,
+        "sideband_width_GeV": 0.0264,
+        "n_a_obs": 1.0,
+        "n_a_obs_err": 1.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 1.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      },
+      {
+        "mass_GeV": 0.25,
+        "resolution_GeV": 0.009231,
+        "signal_window_GeV": 0.013847,
+        "sideband_gap_GeV": 0.004616,
+        "sideband_width_GeV": 0.032309,
+        "n_a_obs": 0.0,
+        "n_a_obs_err": 0.0,
+        "bkg_est": 0.0,
+        "bkg_est_err": 0.0,
+        "projections": {
+          "10% dataset": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          "100% projection": {
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        },
+        "signal": {},
+        "z_binned": [
+          {
+            "z_lo": 0.24,
+            "z_hi": 0.38,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.38,
+            "z_hi": 0.48,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          },
+          {
+            "z_lo": 0.48,
+            "z_hi": null,
+            "n_a_obs": 0.0,
+            "n_c": 0.0,
+            "bkg_est": 0.0,
+            "bkg_est_err": 0.0
+          }
+        ]
+      }
+    ]
+  }
+}

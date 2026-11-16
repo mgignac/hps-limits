@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "description": "ABCD background-estimate systematics for SIMP min_y0-binned analysis (v11 10% data, opt6126). Each value is the fractional shift in the mass-integrated ABCD background prediction (sum of bkg_est over the 50-250 MeV scan) relative to nominal.",
+    "generated": "2026-06-05",
+    "luminosity_pb": 8.656378999999994,
+    "metric": "fractional change in sum(bkg_est) over mass scan [0.050,0.250] GeV",
+    "nominal": {
+      "config": "examples/config_abcd_simp_v11_10pc_miny0_bins_opt6126.yaml",
+      "results_dir": "plots/abcd_simps_v11_1pc_miny0_bins_opt6126",
+      "sb_sigmas": 3.5,
+      "z_control": [
+        0.0,
+        0.2
+      ]
+    },
+    "variations": {
+      "sb_widen": {
+        "param": "sb_sigmas",
+        "nominal": 3.5,
+        "value": 4.5,
+        "group": "sideband",
+        "config": "examples/config_abcd_simp_v11_10pc_miny0_bins_opt6126_sb_widen.yaml"
+      },
+      "sb_narrow": {
+        "param": "sb_sigmas",
+        "nominal": 3.5,
+        "value": 2.5,
+        "group": "sideband",
+        "config": "examples/config_abcd_simp_v11_10pc_miny0_bins_opt6126_sb_narrow.yaml"
+      },
+      "cr_lower004": {
+        "param": "z_control_min",
+        "nominal": 0.0,
+        "value": 0.04,
+        "group": "control_region",
+        "config": "examples/config_abcd_simp_v11_10pc_miny0_bins_opt6126_cr_lower004.yaml"
+      },
+      "cr_upper016": {
+        "param": "z_control_max",
+        "nominal": 0.2,
+        "value": 0.16,
+        "group": "control_region",
+        "config": "examples/config_abcd_simp_v11_10pc_miny0_bins_opt6126_cr_upper016.yaml"
+      }
+    },
+    "combination": "per region/bin: component = max(|+1\u03c3|,|-1\u03c3|) envelope within each group, treated as symmetric \u00b1; total = quadrature(sideband, control_region). Grand total = yield-weighted components combined in quadrature."
+  },
+  "systematics": {
+    "L1L1_bin1": {
+      "region": "L1L1",
+      "nominal_sum_bkg_est": 5396.6874,
+      "variations_frac": {
+        "sb_widen": 0.005452,
+        "sb_narrow": -0.005137,
+        "cr_lower004": -0.000711,
+        "cr_upper016": -2e-06
+      },
+      "components_frac": {
+        "sideband": 0.005452,
+        "control_region": 0.000711
+      },
+      "total_frac": 0.005498,
+      "total_pct": 0.5498
+    },
+    "L1L1_bin2": {
+      "region": "L1L1",
+      "nominal_sum_bkg_est": 1332.3865,
+      "variations_frac": {
+        "sb_widen": -0.002753,
+        "sb_narrow": -0.00141,
+        "cr_lower004": -0.001243,
+        "cr_upper016": 1e-06
+      },
+      "components_frac": {
+        "sideband": 0.002753,
+        "control_region": 0.001243
+      },
+      "total_frac": 0.003021,
+      "total_pct": 0.3021
+    },
+    "L1L2_bin1": {
+      "region": "L1L2",
+      "nominal_sum_bkg_est": 4454.9376,
+      "variations_frac": {
+        "sb_widen": 0.009661,
+        "sb_narrow": -0.007807,
+        "cr_lower004": -0.005205,
+        "cr_upper016": 5.5e-05
+      },
+      "components_frac": {
+        "sideband": 0.009661,
+        "control_region": 0.005205
+      },
+      "total_frac": 0.010973,
+      "total_pct": 1.0973
+    },
+    "L1L2_bin2": {
+      "region": "L1L2",
+      "nominal_sum_bkg_est": 1297.1711,
+      "variations_frac": {
+        "sb_widen": 0.004004,
+        "sb_narrow": -0.0012,
+        "cr_lower004": -0.005381,
+        "cr_upper016": 5.7e-05
+      },
+      "components_frac": {
+        "sideband": 0.004004,
+        "control_region": 0.005381
+      },
+      "total_frac": 0.006707,
+      "total_pct": 0.6707
+    },
+    "L2L2_bin1": {
+      "region": "L2L2",
+      "nominal_sum_bkg_est": 26454.5929,
+      "variations_frac": {
+        "sb_widen": 0.015021,
+        "sb_narrow": -0.014743,
+        "cr_lower004": -0.010761,
+        "cr_upper016": 0.000226
+      },
+      "components_frac": {
+        "sideband": 0.015021,
+        "control_region": 0.010761
+      },
+      "total_frac": 0.018477,
+      "total_pct": 1.8477
+    },
+    "L2L2_bin2": {
+      "region": "L2L2",
+      "nominal_sum_bkg_est": 818.3944,
+      "variations_frac": {
+        "sb_widen": -0.006739,
+        "sb_narrow": 0.00547,
+        "cr_lower004": -0.010787,
+        "cr_upper016": 0.000213
+      },
+      "components_frac": {
+        "sideband": 0.006739,
+        "control_region": 0.010787
+      },
+      "total_frac": 0.012719,
+      "total_pct": 1.2719
+    },
+    "L2L3_bin1": {
+      "region": "L2L3",
+      "nominal_sum_bkg_est": 499.7448,
+      "variations_frac": {
+        "sb_widen": -0.003415,
+        "sb_narrow": -0.011202,
+        "cr_lower004": -0.008662,
+        "cr_upper016": 0.000484
+      },
+      "components_frac": {
+        "sideband": 0.011202,
+        "control_region": 0.008662
+      },
+      "total_frac": 0.01416,
+      "total_pct": 1.416
+    },
+    "L2L3_bin2": {
+      "region": "L2L3",
+      "nominal_sum_bkg_est": 1152.1714,
+      "variations_frac": {
+        "sb_widen": -0.009483,
+        "sb_narrow": -0.009591,
+        "cr_lower004": -0.009554,
+        "cr_upper016": 0.000492
+      },
+      "components_frac": {
+        "sideband": 0.009591,
+        "control_region": 0.009554
+      },
+      "total_frac": 0.013538,
+      "total_pct": 1.3538
+    }
+  },
+  "grand_total": {
+    "nominal": 41406.0861,
+    "sideband_frac": 0.012096,
+    "control_region_frac": 0.00832,
+    "total_frac": 0.014681,
+    "total_pct": 1.4681
+  }
+}

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import gc
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
@@ -318,12 +319,15 @@ def _find_eps2_crossings(
 
     for i in range(len(diff) - 1):
         if diff[i] * diff[i + 1] < 0:
-            # Sign change between i and i+1 — interpolate in log(ε²)
-            log_cross = np.interp(
-                0.0,
-                [diff[i + 1], diff[i]],
-                [np.log(eps2_arr[i + 1]), np.log(eps2_arr[i])],
-            )
+            # Sign change between i and i+1 — interpolate in log(ε²).
+            # Sort so xp is increasing (required by np.interp); handles both
+            # descending (island lower edge) and ascending (island upper edge).
+            d0, d1 = diff[i], diff[i + 1]
+            f0, f1 = np.log(eps2_arr[i]), np.log(eps2_arr[i + 1])
+            if d0 > d1:
+                d0, d1 = d1, d0
+                f0, f1 = f1, f0
+            log_cross = np.interp(0.0, [d0, d1], [f0, f1])
             crossings.append(float(np.exp(log_cross)))
 
     return crossings
@@ -934,11 +938,81 @@ def scan_mu_upper_grid(
 # ---------------------------------------------------------------------------
 
 
+def _background_syst_modifiers(
+    rname: str,
+    background_systematics: dict | None,
+    mode: str,
+) -> list[dict]:
+    """Build normsys modifiers for the background sample of channel *rname*.
+
+    ``background_systematics`` is the mapping returned by
+    :func:`~hps_limits.io.load_background_systematics_json`
+    (``{channel: {"components_frac": {...}, "total_frac": float}}``).  Channels
+    with no entry get no extra modifiers.
+
+    ``mode`` controls the nuisance-parameter (NP) structure:
+
+    ``"components"``
+        One correlated NP per component (e.g. ``bkg_syst_sideband``,
+        ``bkg_syst_control_region``), shared across channels by name.  Matches
+        the JSON's documented combination (each component correlated across all
+        region/bins, components independent of each other).
+    ``"total"``
+        A single correlated NP ``bkg_syst_total`` using ``total_frac`` (all
+        channels' backgrounds move coherently).
+    ``"total_uncorrelated"``
+        A per-channel NP ``bkg_syst_<channel>`` using ``total_frac`` (each
+        channel's background uncertainty independent).
+    """
+    if not background_systematics:
+        return []
+    entry = background_systematics.get(rname)
+    if entry is None:
+        return []
+
+    mods: list[dict] = []
+    if mode == "components":
+        for comp_name, frac in entry.get("components_frac", {}).items():
+            v = float(frac)
+            if v <= 0.0:
+                continue
+            mods.append({
+                "name": f"bkg_syst_{comp_name}",
+                "type": "normsys",
+                "data": {"hi": 1.0 + v, "lo": 1.0 - v},
+            })
+    elif mode == "total":
+        v = float(entry.get("total_frac", 0.0))
+        if v > 0.0:
+            mods.append({
+                "name": "bkg_syst_total",
+                "type": "normsys",
+                "data": {"hi": 1.0 + v, "lo": 1.0 - v},
+            })
+    elif mode == "total_uncorrelated":
+        v = float(entry.get("total_frac", 0.0))
+        if v > 0.0:
+            mods.append({
+                "name": f"bkg_syst_{rname}",
+                "type": "normsys",
+                "data": {"hi": 1.0 + v, "lo": 1.0 - v},
+            })
+    else:
+        raise ValueError(
+            f"Unknown background-systematics mode '{mode}'. Expected "
+            "'components', 'total', or 'total_uncorrelated'."
+        )
+    return mods
+
+
 def _pyhf_spec_from_entries(
     regions: list[str],
     nsig_by_region: dict[str, float],
     bg_by_region: dict[str, "BackgroundEntry"],
     nbkg_unc_frac: float | None = None,
+    signal_systematics: list[dict] | None = None,
+    background_systematics: dict | None = None,
+    bkg_syst_mode: str = "components",
 ) -> dict:
     """Build a pyhf workspace spec from paired background and signal entries.
 
@@ -946,6 +1020,17 @@ def _pyhf_spec_from_entries(
     modelled as an uncorrelated shapesys per region, using either the value
     from the :class:`~hps_limits.io.BackgroundEntry` or ``nbkg_unc_frac * nbkg``
     if an override fraction is supplied.
+
+    Signal systematics are added as normsys modifiers with the same NP name
+    across all channels (fully correlated).  Each entry in
+    ``signal_systematics`` must have ``"name"`` (str) and ``"value"`` (float,
+    relative 1σ).
+
+    Background systematics (ABCD method uncertainties) are added as normsys
+    modifiers on the background sample.  ``background_systematics`` is the
+    mapping from :func:`~hps_limits.io.load_background_systematics_json` and
+    ``bkg_syst_mode`` selects the correlation structure (see
+    :func:`_background_syst_modifiers`).
     """
     channels = []
     observations = []
@@ -960,6 +1045,28 @@ def _pyhf_spec_from_entries(
             nbkg_err = max(float(bg.nbkg_err), 1e-10)
         obs = float(bg.observed)
 
+        sig_modifiers: list[dict] = [
+            {"name": "mu", "type": "normfactor", "data": None}
+        ]
+        for syst in (signal_systematics or []):
+            v = float(syst["value"])
+            sig_modifiers.append({
+                "name": syst["name"],
+                "type": "normsys",
+                "data": {"hi": 1.0 + v, "lo": 1.0 - v},
+            })
+
+        bkg_modifiers: list[dict] = [
+            {
+                "name": f"bkg_stat_{rname}",
+                "type": "shapesys",
+                "data": [nbkg_err],
+            }
+        ]
+        bkg_modifiers.extend(
+            _background_syst_modifiers(rname, background_systematics, bkg_syst_mode)
+        )
+
         channels.append(
             {
                 "name": rname,
@@ -967,20 +1074,12 @@ def _pyhf_spec_from_entries(
                     {
                         "name": "signal",
                         "data": [nsig],
-                        "modifiers": [
-                            {"name": "mu", "type": "normfactor", "data": None}
-                        ],
+                        "modifiers": sig_modifiers,
                     },
                     {
                         "name": "background",
                         "data": [nbkg],
-                        "modifiers": [
-                            {
-                                "name": f"bkg_stat_{rname}",
-                                "type": "shapesys",
-                                "data": [nbkg_err],
-                            }
-                        ],
+                        "modifiers": bkg_modifiers,
                     },
                 ],
             }
@@ -1000,7 +1099,11 @@ def _pyhf_spec_from_entries(
 def scan_cls_from_estimates(
     background: "BackgroundEstimate",
     signal: "SignalEstimate",
+    select_regions: list[str] | None = None,
     nbkg_unc_frac: float | None = None,
+    signal_systematics: list[dict] | None = None,
+    background_systematics: dict | None = None,
+    bkg_syst_mode: str = "components",
     cl_level: float = 0.95,
     verbose: bool = False,
 ) -> list[ClsScanResult]:
@@ -1017,6 +1120,10 @@ def scan_cls_from_estimates(
         Background estimates loaded via :func:`~hps_limits.io.load_background_json`.
     signal:
         Signal yields loaded via :func:`~hps_limits.io.load_signal_json`.
+    select_regions:
+        If given, only these region names are included in the model.  Use to
+        run a single hit category in isolation (e.g. ``["L1L1"]``).  ``None``
+        (default) uses all regions common to background and signal.
     nbkg_unc_frac:
         Override the background uncertainty with this relative fraction.
         ``None`` (default) uses the ``nbkg_err`` stored in each
@@ -1044,14 +1151,14 @@ def scan_cls_from_estimates(
         bg_by_region = {e.region: e for e in bg_entries}
         sig_regions = {e.region for e in sig_entries}
         regions = [r for r in background.regions if r in bg_by_region and r in sig_regions]
+        if select_regions is not None:
+            regions = [r for r in regions if r in select_regions]
         if not regions:
             continue
 
-        # Skip mass if any region has zero background (pyhf shapesys needs >0)
-        if any(bg_by_region[r].nbkg <= 0 for r in regions):
-            if verbose:
-                print(f"  mass={mass_mev:.0f} MeV: skipped (zero background in a region)")
-            continue
+        if verbose and any(bg_by_region[r].nbkg <= 0 for r in regions):
+            zero = [r for r in regions if bg_by_region[r].nbkg <= 0]
+            print(f"  mass={mass_mev:.0f} MeV: zero background in {zero}, clamping to 1e-10")
 
         sig_by_region_eps2: dict[tuple[str, float], float] = {
             (e.region, e.eps2): e.nsig for e in sig_entries
@@ -1078,17 +1185,31 @@ def scan_cls_from_estimates(
                 continue
 
             spec = _pyhf_spec_from_entries(
-                regions, nsig_by_region, bg_by_region, nbkg_unc_frac
+                regions, nsig_by_region, bg_by_region, nbkg_unc_frac,
+                signal_systematics, background_systematics, bkg_syst_mode,
             )
             ws = pyhf.Workspace(spec)
             model = ws.model()
             data = ws.data(model)
 
-            cls_obs_i, cls_exp_set_i = pyhf.infer.hypotest(
-                1.0, data, model, test_stat="qtilde", return_expected_set=True
-            )
-            cls_obs_val = float(cls_obs_i)
-            cls_exp_row = [float(v) for v in cls_exp_set_i]
+            try:
+                cls_obs_i, cls_exp_set_i = pyhf.infer.hypotest(
+                    1.0, data, model, test_stat="qtilde", return_expected_set=True
+                )
+                cls_obs_val = float(cls_obs_i)
+                cls_exp_row = [float(v) for v in cls_exp_set_i]
+            except Exception as exc:
+                if verbose:
+                    print(
+                        f"  {eps2:>12.4e}  {total_nsig:>10.4e}"
+                        f"  [optimizer failed: {type(exc).__name__}]"
+                    )
+                continue
+
+            # Replace NaN (0/0 in CLs) with 1.0 — conservatively not excluded
+            if np.isnan(cls_obs_val):
+                cls_obs_val = 1.0
+            cls_exp_row = [1.0 if np.isnan(v) else v for v in cls_exp_row]
 
             if verbose:
                 print(
@@ -1122,10 +1243,95 @@ def scan_cls_from_estimates(
     return results
 
 
+def _mu_upper_from_cls_scan(
+    data,
+    model,
+    level: float,
+    par_bounds: list,
+    mu_upper_cap: float,
+    n_grid: int = 64,
+) -> tuple[float, list[float]]:
+    """Robust fallback μ-upper-limit via a direct CLs scan + interpolation.
+
+    Used when pyhf's toms748 root-finder fails: it probes μ → 0, where the
+    asymptotic ``qtilde`` test statistic is 0/0 → NaN, raising
+    ``ValueError: f(0.0) -> nan`` (and the caller would otherwise pin the point
+    to the cap, producing spurious spikes).  ``hypotest`` itself is finite at
+    finite μ, so here CLs (observed + the 5-member expected band) is evaluated
+    on a log-spaced μ grid, non-finite nodes are dropped, and the CLs = *level*
+    crossing is located per series by log-log interpolation between the
+    bracketing grid points.
+
+    Returns ``(mu_obs, mu_exp_band)`` with the same 5-element band ordering as
+    :func:`pyhf.infer.intervals.upper_limits.upper_limit`.
+    """
+    from scipy.optimize import brentq
+
+    # cap·1e-6 … cap (e.g. 1e-2 … 1e4 for cap=1e4): low enough to bracket even
+    # sub-1 limits, high enough to reach the cap.
+    lo = max(float(mu_upper_cap) * 1e-6, 1e-6)
+    mus = np.logspace(np.log10(lo), np.log10(float(mu_upper_cap)), n_grid)
+
+    _cache: dict[float, list[float]] = {}
+
+    def _clsvec(mu: float) -> list[float]:
+        """[CLs_obs, CLs_-2σ, -1σ, med, +1σ, +2σ] at μ; NaNs if hypotest fails."""
+        key = float(mu)
+        if key in _cache:
+            return _cache[key]
+        try:
+            cls_obs, cls_exp = pyhf.infer.hypotest(
+                key, data, model, test_stat="qtilde",
+                par_bounds=par_bounds, return_expected_set=True,
+            )
+            vals = [float(cls_obs)] + [float(v) for v in cls_exp]
+        except Exception:
+            vals = [float("nan")] * 6
+        _cache[key] = vals
+        return vals
+
+    grid = [(float(mu), _clsvec(float(mu))) for mu in mus]
+
+    def _crossing(s: int) -> float:
+        # CLs is monotonically decreasing in μ; the first finite node at/below
+        # *level* brackets the limit, then refine the root between the two
+        # bracketing nodes (where hypotest is finite) to match the toms748 path.
+        pts = [(mu, v[s]) for mu, v in grid if np.isfinite(v[s])]
+        if len(pts) < 2:
+            return float(mu_upper_cap)
+        for k in range(len(pts)):
+            if pts[k][1] <= level:
+                if k == 0:
+                    return pts[0][0]          # limit below grid (rare); conservative
+                m0, c0 = pts[k - 1]
+                m1, c1 = pts[k]
+                f = lambda mu: _clsvec(mu)[s] - level
+                try:
+                    return float(brentq(f, m0, m1, rtol=1e-4, maxiter=80))
+                except Exception:
+                    pass
+                # log-log interpolation fallback if the root-find misbehaves
+                if c0 > 0.0 and c1 > 0.0 and c0 != c1:
+                    lm = (np.log(m0)
+                          + (np.log(level) - np.log(c0))
+                          * (np.log(m1) - np.log(m0)) / (np.log(c1) - np.log(c0)))
+                    return float(np.exp(lm))
+                t = (level - c0) / (c1 - c0) if c1 != c0 else 0.0
+                return m0 + t * (m1 - m0)
+        return float(mu_upper_cap)            # never crossed → at/above cap
+
+    crossings = [_crossing(s) for s in range(6)]
+    return crossings[0], crossings[1:]
+
+
 def scan_mu_upper_from_estimates(
     background: "BackgroundEstimate",
     signal: "SignalEstimate",
+    select_regions: list[str] | None = None,
     nbkg_unc_frac: float | None = None,
+    signal_systematics: list[dict] | None = None,
+    background_systematics: dict | None = None,
+    bkg_syst_mode: str = "components",
     cl_level: float = 0.95,
     mu_upper_cap: float = 10000.0,
     verbose: bool = False,
@@ -1145,6 +1351,10 @@ def scan_mu_upper_from_estimates(
         Background estimates loaded via :func:`~hps_limits.io.load_background_json`.
     signal:
         Signal yields loaded via :func:`~hps_limits.io.load_signal_json`.
+    select_regions:
+        If given, only these region names are included in the model.  Use to
+        run a single hit category in isolation (e.g. ``["L1L1"]``).  ``None``
+        (default) uses all regions common to background and signal.
     nbkg_unc_frac:
         Override background uncertainty fraction.  ``None`` uses stored ``nbkg_err``.
     cl_level:
@@ -1172,13 +1382,14 @@ def scan_mu_upper_from_estimates(
         bg_by_region = {e.region: e for e in bg_entries}
         sig_regions = {e.region for e in sig_entries}
         regions = [r for r in background.regions if r in bg_by_region and r in sig_regions]
+        if select_regions is not None:
+            regions = [r for r in regions if r in select_regions]
         if not regions:
             continue
 
-        if any(bg_by_region[r].nbkg <= 0 for r in regions):
-            if verbose:
-                print(f"  mass={mass_mev:.0f} MeV: skipped (zero background in a region)")
-            continue
+        if verbose and any(bg_by_region[r].nbkg <= 0 for r in regions):
+            zero = [r for r in regions if bg_by_region[r].nbkg <= 0]
+            print(f"  mass={mass_mev:.0f} MeV: zero background in {zero}, clamping to 1e-10")
 
         sig_by_region_eps2: dict[tuple[str, float], float] = {
             (e.region, e.eps2): e.nsig for e in sig_entries
@@ -1195,6 +1406,7 @@ def scan_mu_upper_from_estimates(
         mu_obs_list: list[float] = []
         mu_exp_band_rows: list[list[float]] = []
         seen_below_cap = False
+        n_fallback = 0
         valid_eps2: list[float] = []
 
         for i, eps2 in enumerate(eps2_arr):
@@ -1206,7 +1418,8 @@ def scan_mu_upper_from_estimates(
                 continue
 
             spec = _pyhf_spec_from_entries(
-                regions, nsig_by_region, bg_by_region, nbkg_unc_frac
+                regions, nsig_by_region, bg_by_region, nbkg_unc_frac,
+                signal_systematics, background_systematics, bkg_syst_mode,
             )
             ws = pyhf.Workspace(spec)
             model = ws.model()
@@ -1216,16 +1429,21 @@ def scan_mu_upper_from_estimates(
             par_bounds[model.config.poi_index] = (0.0, float(mu_upper_cap) * 10)
 
             # Pre-screen: single hypotest at the cap value
-            cls_at_cap = float(
-                pyhf.infer.hypotest(
-                    float(mu_upper_cap),
-                    data,
-                    model,
-                    test_stat="qtilde",
-                    par_bounds=par_bounds,
-                    return_expected_set=False,
+            try:
+                cls_at_cap = float(
+                    pyhf.infer.hypotest(
+                        float(mu_upper_cap),
+                        data,
+                        model,
+                        test_stat="qtilde",
+                        par_bounds=par_bounds,
+                        return_expected_set=False,
+                    )
                 )
-            )
+                if np.isnan(cls_at_cap):
+                    cls_at_cap = 1.0
+            except Exception:
+                cls_at_cap = 1.0  # treat optimizer failure as above-cap
             above_cap = cls_at_cap >= level
 
             if above_cap:
@@ -1250,20 +1468,46 @@ def scan_mu_upper_from_estimates(
                     break
                 continue
 
-            # Full upper-limit computation
+            # Full upper-limit computation: fast asymptotic root-finder, with a
+            # robust CLs-scan fallback when it fails or returns a spurious value.
+            #
+            # We call ``toms748_scan`` directly (not ``upper_limit``) and pass
+            # ``level`` explicitly: pyhf 0.7.6's ``upper_limit(scan=None)`` drops
+            # the ``level`` argument and always solves CLs = 0.05, so going
+            # through it would compute a 95% CL limit regardless of cl_level.
+            #
+            # The fallback handles the points where toms748 probes μ → 0, where
+            # asymptotic qtilde is 0/0 → NaN (``f(0.0) -> nan``).  The pre-screen
+            # above already guarantees the true limit is below the cap here, so
+            # an exception, a non-finite result, or a value pinned at the cap is
+            # spurious and triggers the fallback.
+            used_fallback = False
+            poi_idx = model.config.poi_index
+            b_lo, b_hi = model.config.suggested_bounds()[poi_idx]
             try:
-                mu_obs, mu_exp_band = pyhf.infer.intervals.upper_limits.upper_limit(
+                mu_obs, mu_exp_band = pyhf.infer.intervals.upper_limits.toms748_scan(
                     data,
                     model,
-                    scan=None,
+                    b_lo,
+                    b_hi,
                     level=level,
                     test_stat="qtilde",
                     par_bounds=par_bounds,
-                    return_results=False,
                 )
-            except (ValueError, RuntimeError):
-                mu_obs = float(mu_upper_cap)
-                mu_exp_band = [float(mu_upper_cap)] * 5
+                mu_obs = float(mu_obs)
+                mu_exp_band = [float(v) for v in mu_exp_band]
+                if (not np.isfinite(mu_obs)
+                        or not all(np.isfinite(v) for v in mu_exp_band)
+                        or mu_obs >= float(mu_upper_cap)):
+                    used_fallback = True
+            except Exception:
+                used_fallback = True
+
+            if used_fallback:
+                mu_obs, mu_exp_band = _mu_upper_from_cls_scan(
+                    data, model, level, par_bounds, mu_upper_cap,
+                )
+                n_fallback += 1
 
             mu_obs_val = min(float(mu_obs), float(mu_upper_cap))
             mu_exp_row = [min(float(v), float(mu_upper_cap)) for v in mu_exp_band]
@@ -1275,11 +1519,24 @@ def scan_mu_upper_from_estimates(
                 print(
                     f"  {eps2:>12.4e}  {total_nsig:>10.4e}"
                     f"  {mu_obs_val:>10.4f}  {mu_exp_row[2]:>12.4f}"
+                    f"{'  [fallback]' if used_fallback else ''}"
                 )
 
             valid_eps2.append(eps2)
             mu_obs_list.append(mu_obs_val)
             mu_exp_band_rows.append(mu_exp_row)
+
+            # pyhf Workspace/model objects contain reference cycles (config ↔
+            # model), so they are reclaimed only by the cyclic collector, not
+            # by refcounting.  Over a full ε² × mass grid these accumulate and
+            # can exhaust memory; collect periodically to bound the footprint.
+            if i % 25 == 0:
+                gc.collect()
+
+        gc.collect()
+
+        if verbose and n_fallback:
+            print(f"  [robust CLs-scan fallback used at {n_fallback} ε² point(s)]")
 
         if not valid_eps2:
             continue
@@ -1296,3 +1553,55 @@ def scan_mu_upper_from_estimates(
         )
 
     return results
+
+
+def broaden_mu_band_with_systematic(
+    nominal: list["MuUpperScanResult"],
+    up: list["MuUpperScanResult"],
+    down: list["MuUpperScanResult"],
+) -> None:
+    """Broaden the expected μ-upper band of *nominal* by a background systematic.
+
+    ``up`` / ``down`` are the **same** μ scan recomputed with every channel's
+    background scaled by ``(1 ± σ_total)`` (the per-channel total ABCD
+    systematic).  The shift of the *median* expected limit between nominal and
+    the ±1σ-shifted backgrounds is taken as the 1σ systematic uncertainty on the
+    expected limit, and combined in quadrature with the existing statistical
+    band, edge by edge.  The median (index 2) is left unchanged; only the
+    ±1σ (indices 1, 3) and ±2σ (indices 0, 4) edges move outward.
+
+    Modifies ``nominal`` in place.  The observed limit is untouched — the
+    systematic is applied to the expected band only.
+    """
+    up_by_mass = {round(r.mass, 6): r for r in up}
+    down_by_mass = {round(r.mass, 6): r for r in down}
+
+    # (band index, number of sigmas the systematic contributes, sign)
+    edges = ((0, 2.0, -1.0), (1, 1.0, -1.0), (3, 1.0, +1.0), (4, 2.0, +1.0))
+
+    for res in nominal:
+        u = up_by_mass.get(round(res.mass, 6))
+        d = down_by_mass.get(round(res.mass, 6))
+        if u is None or d is None:
+            continue
+
+        u_med = {round(float(e), 12): m for e, m in zip(u.eps2_arr, u.mu_upper_exp_arr)}
+        d_med = {round(float(e), 12): m for e, m in zip(d.eps2_arr, d.mu_upper_exp_arr)}
+
+        band = res.mu_upper_exp_band_arr.astype(float).copy()
+        for i, eps2 in enumerate(res.eps2_arr):
+            key = round(float(eps2), 12)
+            med = float(res.mu_upper_exp_arr[i])
+            mu_u = u_med.get(key)
+            mu_d = d_med.get(key)
+            if mu_u is None or mu_d is None or not np.isfinite(med):
+                continue
+            delta = max(abs(mu_u - med), abs(mu_d - med))
+            if not np.isfinite(delta) or delta <= 0.0:
+                continue
+            for q, nsig, sign in edges:
+                stat_dev = float(band[i, q]) - med
+                if not np.isfinite(stat_dev):
+                    continue
+                band[i, q] = med + sign * float(np.hypot(stat_dev, nsig * delta))
+        res.mu_upper_exp_band_arr = band

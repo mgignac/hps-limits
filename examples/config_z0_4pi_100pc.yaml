@@ -1,0 +1,39 @@
+# HPS Limits — SIMP z0 shape fit, 4pi, L1L1+L1L2+L2L2, 100% projection
+#
+# Signal from data/majd/pi_scan/results_is{cat}_MGFixedCut_epsgrid150_4pi.json
+# (already 100% → signal_scale = 1).  Background from data/majd/pi_scan/4pi/
+# (10% ABCD estimate; the _ps## selection tags are stripped so channels match),
+# flat-scaled 10% → 100% by 161.7999 / 18.0109 = 8.983443359299091.
+#
+#   python3.9 scripts/run_limits.py --config examples/config_z0_4pi_100pc.yaml
+
+label: "HPS SIMPs (4pi, 100% lumi)"
+mode: z0
+output_dir: ../plots/simp_4pi_100pc
+
+# ── Signal inputs (already 100%-scaled) ───────────────────────────────────────
+z0_files:
+  - ../data/majd/pi_scan/results_isL1L1_MGFixedCut_epsgrid150_4pi.json
+  - ../data/majd/pi_scan/results_isL1L2_MGFixedCut_epsgrid150_4pi.json
+  - ../data/majd/pi_scan/results_isL2L2_MGFixedCut_epsgrid150_4pi.json
+
+# ── Background: 10% ABCD estimate, flat-scaled to 100% ────────────────────────
+background_jsons:
+  - ../data/majd/pi_scan/4pi/results_4pi_L1L1_bin*.json
+  - ../data/majd/pi_scan/4pi/results_4pi_L1L2_bin*.json
+  - ../data/majd/pi_scan/4pi/results_4pi_L2L2_bin*.json
+background_projection: null
+background_scale: 8.983443359299091  # 10% → 100%  (161.7999 / 18.0109)
+
+# ── Analysis options ──────────────────────────────────────────────────────────
+simps: true
+per_region: true
+run_cls: true
+run_mu: true
+mu_cap: 10000.0
+cl_level: 0.90
+signal_scale: 1.0
+
+bkg_zero_floor: false
+summary_plot: true
+prior_exclusions: []

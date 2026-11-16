@@ -1,0 +1,44 @@
+# HPS Limits — nominal A′ displaced-vertex, L1L1 + L1L2 + L2L2, zero-bkg, 100% lumi
+#
+# Same setup as config_ap_l1l1.yaml (rederived L1L1 + L1L2 + L2L2 ap_displaced
+# files, min_y0 vertex-projection), but the signal is scaled from 10% to the
+# full dataset.  Background is identically zero, so only the signal scales.
+#   signal_scale = L(full)/L(10%) = 161.799 / 18.0109 = 8.983393389558545
+#
+# Run with:
+#   python3.9 scripts/run_limits.py --config examples/config_ap_l1l1_100pct.yaml
+
+label: "HPS A' (min_y0, 100% lumi)"
+mode: classic
+signal_format: ap_displaced
+
+output_dir: ../plots/ap_min_y0_100pc
+
+# ── Inputs ────────────────────────────────────────────────────────────────────
+# No background_json — zero_background: true below synthesizes a zero background.
+signal_jsons:
+  - file:   ../data/sarah-latest/ap_displaced_yield__l1l1_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L1L1
+  - file:   ../data/sarah-latest/ap_displaced_yield__l1l2_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L1L2
+  - file:   ../data/sarah-latest/ap_displaced_yield__l2l2_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L2L2
+
+# ── Analysis options ──────────────────────────────────────────────────────────
+simps: false         # false → ε² axis (nominal A′ model)
+per_region: true     # combined (L1L1+L1L2) plus each category individually
+run_cls: false       # CLs island-of-exclusion scan
+run_mu: true         # μ upper-limit scan
+mu_cap: 10000.0
+cl_level: 0.90       # 90% CL
+
+# ── Post-load transformations ─────────────────────────────────────────────────
+zero_background: true                   # background-free search
+signal_scale: 8.983393389558545         # 10% → 100%  (161.799 / 18.0109)
+
+# ── Systematic studies ────────────────────────────────────────────────────────
+bkg_zero_floor: false
+
+# ── Summary exclusion plot ────────────────────────────────────────────────────
+summary_plot: false
+prior_exclusions: []

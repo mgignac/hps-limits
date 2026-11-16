@@ -1,0 +1,34 @@
+# HPS Limits — A′ L1L1+L1L2+L2L2, rmng_bkg=0.1, 100% lumi, assume 2 observed events
+#
+# Same as config_ap_rmng_bkg_0pt1_100pc.yaml but with an assumed observed count
+# of 2 events per channel on top of the ~zero background (an observed excess).
+#   python3.9 scripts/run_limits.py --config examples/config_ap_rmng_bkg_0pt1_100pc_obs2.yaml
+
+label: "HPS A' (rmng_bkg=0.1, 100% lumi, Nobs=2)"
+mode: classic
+signal_format: ap_displaced
+
+output_dir: ../plots/ap_rmng_bkg_0pt1_100pc_obs2
+
+signal_jsons:
+  - file:   ../data/sarah-latest/rmng_bkg_0pt1/ap_displaced_yield__l1l1_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L1L1
+  - file:   ../data/sarah-latest/rmng_bkg_0pt1/ap_displaced_yield__l1l2_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L1L2
+  - file:   ../data/sarah-latest/rmng_bkg_0pt1/ap_displaced_yield__l2l2_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L2L2
+
+simps: false
+per_region: true
+run_cls: false
+run_mu: true
+mu_cap: 10000.0
+cl_level: 0.90
+
+zero_background: true              # background prediction ~0
+assume_observed: 2                 # observed = 2 per channel (excess on ~0 bkg)
+signal_scale: 8.983393389558545    # 10% → 100%
+
+bkg_zero_floor: false
+summary_plot: false
+prior_exclusions: []

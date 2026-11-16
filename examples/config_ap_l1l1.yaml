@@ -1,0 +1,43 @@
+# HPS Limits — nominal A′ displaced-vertex, L1L1 + L1L2 + L2L2, zero-background
+#
+# Rederived nominal A′ inputs: ap_displaced yield files for L1L1, L1L2 and L2L2
+# (min_y0 vertex-projection, scaled to 10%).  Zero-background search, so no
+# background file is needed — synthetic_zero_background covers the grid.
+#
+# Run with:
+#   python3.9 scripts/run_limits.py --config examples/config_ap_l1l1.yaml
+
+label: "HPS A' (min_y0)"
+mode: classic
+signal_format: ap_displaced
+
+output_dir: ../plots/ap_min_y0
+
+# ── Inputs ────────────────────────────────────────────────────────────────────
+# No background_json — zero_background: true below synthesizes a zero background.
+signal_jsons:
+  - file:   ../data/sarah-latest/ap_displaced_yield__l1l1_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L1L1
+  - file:   ../data/sarah-latest/ap_displaced_yield__l1l2_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L1L2
+  - file:   ../data/sarah-latest/ap_displaced_yield__l2l2_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L2L2
+
+# ── Analysis options ──────────────────────────────────────────────────────────
+simps: false         # false → ε² axis (nominal A′ model)
+per_region: true     # combined (L1L1+L1L2) plus each category individually
+run_cls: false       # CLs island-of-exclusion scan
+run_mu: true         # μ upper-limit scan
+mu_cap: 10000.0
+cl_level: 0.90       # 90% CL
+
+# ── Post-load transformations ─────────────────────────────────────────────────
+zero_background: true   # background-free search
+signal_scale: 1.0       # signal file already at its target normalisation (10%)
+
+# ── Systematic studies ────────────────────────────────────────────────────────
+bkg_zero_floor: false
+
+# ── Summary exclusion plot ────────────────────────────────────────────────────
+summary_plot: false
+prior_exclusions: []

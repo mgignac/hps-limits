@@ -1,0 +1,267 @@
+\section{Upper Limit Setting for the HPS \texorpdfstring{$A'$}{A'} Search}
+
+\subsection{The \CLs{} Method}
+
+\subsubsection{Motivation}
+
+The standard frequentist approach to excluding a signal hypothesis is to
+compute a $p$-value under the signal-plus-background hypothesis ($H_1$) and
+reject $H_1$ when that $p$-value falls below some threshold $\alpha$ (e.g.\
+$\alpha = 0.05$ for 95\% CL).  In regions where the experiment has little
+sensitivity — where the expected signal is much smaller than the background
+fluctuation — this procedure can spuriously exclude a signal that was never
+actually testable.  The \CLs{} method~\cite{Read2002,Junk1999} corrects for
+this by normalising the signal $p$-value by the background-only $p$-value,
+producing a conservative but well-behaved exclusion criterion.
+
+\subsubsection{Test Statistic}
+
+The HPS limit calculation uses the one-sided profile likelihood ratio test
+statistic $\tilde{q}_\mu$, defined as
+%
+\begin{equation}
+  \tilde{q}_\mu =
+  \begin{cases}
+    -2\ln\dfrac{\mathcal{L}(\mu,\,\hat{\hat{\boldsymbol{\theta}}}_\mu)}
+               {\mathcal{L}(\hat{\mu},\,\hat{\boldsymbol{\theta}})}
+    & \hat{\mu} \geq 0, \\[10pt]
+    -2\ln\dfrac{\mathcal{L}(\mu,\,\hat{\hat{\boldsymbol{\theta}}}_\mu)}
+               {\mathcal{L}(0,\,\hat{\hat{\boldsymbol{\theta}}}_0)}
+    & \hat{\mu} < 0,
+  \end{cases}
+\end{equation}
+%
+where $\mu$ is the signal-strength parameter of interest (POI),
+$\boldsymbol{\theta}$ are nuisance parameters encoding systematic
+uncertainties, $\hat{\mu}$ and $\hat{\boldsymbol{\theta}}$ are the global
+maximum-likelihood estimators, and $\hat{\hat{\boldsymbol{\theta}}}_\mu$ is
+the conditional MLE for the nuisance parameters at fixed $\mu$.  The
+one-sided form $\tilde{q}_\mu$ ensures that over-fluctuations of the data
+relative to the signal hypothesis are not used to exclude the signal.
+
+\subsubsection{\CLs{} Definition}
+
+For a given $\mu$, two $p$-values are computed from the distribution of
+$\tilde{q}_\mu$:
+%
+\begin{itemize}
+  \item $p_{s+b}(\mu)$: probability, under $H_1(\mu)$, of observing a test
+    statistic at least as signal-like as observed;
+  \item $p_b(\mu)$: probability, under $H_0$ (background only), of observing
+    a test statistic at least as signal-like.
+\end{itemize}
+%
+The \CLs{} value is then
+%
+\begin{equation}
+  \CLs(\mu) = \frac{p_{s+b}(\mu)}{1 - p_b(\mu)}.
+\end{equation}
+%
+The denominator $1-p_b$ suppresses the exclusion power when the experiment is
+insensitive: if the observed data fluctuates toward the background-only
+prediction regardless of $\mu$, both numerator and denominator are small and
+\CLs{} stays near unity.  A signal hypothesis is excluded at confidence level
+CL when $\CLs(\mu) < 1 - \mathrm{CL}$, i.e.\ $\CLs < 0.05$ for 95\% CL.
+
+\subsubsection{Upper Limit}
+
+The 95\% CL upper limit on $\mu$ is the value $\mu_\text{upper}$ where
+$\CLs(\mu_\text{upper}) = 0.05$.  In practice this is found by root-finding
+over a scan of $\mu$ values.
+
+\subsubsection{Expected Limits and Uncertainty Bands}
+
+To assess the expected sensitivity independently of the observed data, the
+calculation is repeated using \emph{Asimov data} — the dataset in which every
+observable equals its expected value under the background-only hypothesis.
+The median expected limit $\hat{\mu}^\text{exp}$ is the result for Asimov
+data.  The $\pm1\sigma$ and $\pm2\sigma$ uncertainty bands are obtained from
+the quantiles of $\mu_\text{upper}$ over an ensemble of pseudo-experiments
+generated under $H_0$, characterising the range of limits one would expect
+from statistical fluctuations alone.
+
+% ============================================================
+\subsection{\pyhf{}}
+% ============================================================
+
+\pyhf{}~\cite{pyhf,pyhf_joss} is a pure-Python library implementing the
+HistFactory statistical model used widely in HEP analyses.  It provides:
+%
+\begin{itemize}
+  \item \textbf{Workspaces} — JSON-serialisable likelihood specifications
+    that fully describe a model, its data, and the measurement configuration.
+    Workspaces can be published alongside results for reproducibility.
+
+  \item \textbf{Channels and samples} — each \emph{channel} (signal region)
+    contains one or more \emph{samples} (e.g.\ signal, background).  Each
+    sample carries expected yields and a list of \emph{modifiers} encoding
+    systematic uncertainties.
+
+  \item \textbf{Modifiers} — the types used in this framework are:
+    \begin{itemize}
+      \item \texttt{normfactor}: a freely floating multiplicative scale
+        factor; used for the POI $\mu$.
+      \item \texttt{normsys}: a log-normal constraint on a sample's
+        normalisation, parameterised by the $\pm1\sigma$ scale factors
+        $\theta_\text{hi}$ and $\theta_\text{lo}$.
+      \item \texttt{shapesys}: a per-bin Poisson-constrained uncertainty,
+        parameterised by the absolute yield uncertainty.
+    \end{itemize}
+
+  \item \textbf{Inference} — \texttt{pyhf.infer.hypotest} computes \CLs{}
+    (and the expected band) for a fixed $\mu$.
+    \texttt{pyhf.infer.intervals.upper\_limits.upper\_limit} finds the
+    $\mu_\text{upper}$ crossing by root-finding (TOMS~748 algorithm).
+
+  \item \textbf{Backends} — \pyhf{} is backend-agnostic (NumPy, JAX,
+    PyTorch), enabling automatic differentiation and GPU acceleration.
+\end{itemize}
+
+% ============================================================
+\subsection{Implementation in \texttt{hps-limits}}
+% ============================================================
+
+\subsubsection{Statistical Model}
+
+For each $A'$ mass hypothesis $m$ and coupling $\varepsilon^2$, the model
+contains one \pyhf{} channel per detector hit category (e.g.\ L1L1, L1L2,
+L2L2, L2L3, L3L3).  Each channel has two samples:
+%
+\begin{itemize}
+  \item \textbf{signal}: expected yield $N_\text{sig}(m,\varepsilon^2)$
+    scaled by the POI $\mu$ via a \texttt{normfactor} modifier;
+  \item \textbf{background}: expected yield $N_\text{bkg}(m)$ from the ABCD
+    background estimate, with uncertainties described by the modifiers listed
+    below.
+\end{itemize}
+%
+The POI $\mu = 1$ corresponds to the nominal signal prediction at the given
+$(m, \varepsilon^2)$.  An upper limit $\mu_\text{upper} < 1$ means the
+nominal signal is excluded.
+
+\subsubsection{Systematic Uncertainties}
+
+Uncertainties are specified per search region.  Two modifier types are
+supported, summarised in Table~\ref{tab:modifiers}.
+
+\begin{table}[h]
+  \centering
+  \caption{Systematic uncertainty types supported by \texttt{hps-limits}.}
+  \label{tab:modifiers}
+  \begin{tabular}{lll}
+    \hline
+    Input type  & \pyhf{} modifier & Interpretation \\
+    \hline
+    \texttt{normsys}  & \texttt{normsys}  &
+      Fractional $1\sigma$ uncertainty $v$;
+      $\theta_\text{hi} = 1+v$, $\theta_\text{lo} = 1-v$ \\
+    \texttt{shapesys} & \texttt{shapesys} &
+      Absolute $1\sigma$ yield uncertainty; Poisson-constrained \\
+    \hline
+  \end{tabular}
+\end{table}
+
+Nuisance parameters with the \emph{same name} across regions are treated as
+fully correlated (shared NP in the global fit); distinct names give
+uncorrelated NPs.  Background statistical uncertainties are modelled as
+uncorrelated \texttt{shapesys} nuisance parameters, one per region.
+
+\subsubsection{Input Data}
+
+\textbf{Background} is loaded from results JSON files produced by the ABCD
+background estimator.  Each entry carries $N_\text{bkg}$, its $1\sigma$
+uncertainty, and the observed count in the signal window, indexed by (region,
+mass).  Luminosity projections can be substituted at load time.
+
+\textbf{Signal} yields are loaded separately from signal or cut-scan JSON
+files, providing $N_\text{sig}(\text{region}, m, \varepsilon^2)$ from Monte
+Carlo simulation.  Signal is intentionally decoupled from the background
+configuration so that the same background model is reused across all mass and
+coupling hypotheses.
+
+For $z_0$-binned analyses, the transverse impact parameter $z_0$ is divided
+into sub-bins, each becoming a separate \pyhf{} channel, enabling a shape fit
+in the displaced-vertex variable.
+
+\subsubsection{Limit-Setting Workflow}
+
+\paragraph{Single mass, signal-strength limit.}
+\texttt{compute\_upper\_limit\_from\_input} builds the \pyhf{} model and
+calls \texttt{upper\_limit} over a $\mu$ scan of 100 points in
+$[0, \mu_\text{max}]$ to find the $\CLs = 0.05$ crossing.
+
+\paragraph{Mass scan.}
+\texttt{scan\_mass\_limits\_from\_input} loops over a mapping
+$\{m \to \{r \to N_\text{sig}\}\}$, calling
+\texttt{compute\_upper\_limit\_from\_input} at each mass point and returning
+a list of \texttt{LimitResult} objects.
+
+\paragraph{Direct $\varepsilon^2$ scan.}
+For displaced-vertex searches where $N_\text{sig}(\varepsilon^2)$ has a
+non-trivial dependence on $\varepsilon^2$, \texttt{scan\_cls\_from\_estimates}
+evaluates \texttt{hypotest}($\mu=1$) at each $(m, \varepsilon^2)$ grid point
+and interpolates in $\log\varepsilon^2$ to find the $\varepsilon^2$ where
+$\CLs = 0.05$.  This approach makes no assumption that
+$N_\text{sig} \propto \varepsilon^2$ and directly locates both the lower and
+upper boundaries of the exclusion island.
+
+\paragraph{$\mu$ upper-limit grid.}
+\texttt{scan\_mu\_upper\_from\_estimates} computes $\mu_\text{upper}$ at each
+$(m, \varepsilon^2)$ grid point via root-finding, producing a 2D sensitivity
+map.  Points where sensitivity is below a cap ($\mu_\text{upper} \geq
+\mu_\text{cap}$) are assigned the cap value with an early-exit optimisation:
+once the exclusion island has been fully traversed, remaining high-$\varepsilon^2$
+points are filled without calling \pyhf{}.
+
+\subsubsection{Results}
+
+Each mass point yields a \texttt{LimitResult} containing:
+%
+\begin{itemize}
+  \item \texttt{mu\_upper\_obs} / \texttt{mu\_upper\_exp}: observed and
+    expected 95\% CL upper limits on $\mu$;
+  \item \texttt{mu\_upper\_exp\_band}: expected band at
+    $[-2\sigma,\,-1\sigma,\,\text{median},\,+1\sigma,\,+2\sigma]$;
+  \item \texttt{eps2\_upper\_obs} / \texttt{eps2\_upper\_exp} /
+    \texttt{eps2\_upper\_exp\_band}: the same quantities expressed directly
+    in $\varepsilon^2$ (populated by the direct $\varepsilon^2$ scan path);
+  \item \texttt{cls\_obs} / \texttt{cls\_exp}: \CLs{} values at $\mu = 1$
+    (diagnostic cross-check).
+\end{itemize}
+%
+For the island-of-exclusion visualisation, \texttt{scan\_cls\_grid} returns
+the full $\CLs(\varepsilon^2)$ curves per mass, from which both the lower and
+upper $\varepsilon^2$ exclusion boundaries are extracted by finding all
+$\CLs = 0.05$ sign changes.
+
+% ---- suggested macros (add to your preamble if not already present) ----
+% \newcommand{\CLs}{\ensuremath{\mathrm{CL}_s}}
+% \newcommand{\pyhf}{\texttt{pyhf}}
+%
+% ---- suggested bibliography entries -----------------------------------
+% @article{Read2002,
+%   author  = {Read, A. L.},
+%   title   = {Presentation of search results: the {CL}$_s$ technique},
+%   journal = {J. Phys. G},
+%   volume  = {28}, pages = {2693}, year = {2002},
+%   doi     = {10.1088/0954-3899/28/10/313}}
+%
+% @article{Junk1999,
+%   author  = {Junk, T.},
+%   title   = {Confidence level computation for combining searches
+%              with small statistics},
+%   journal = {Nucl. Instrum. Meth. A},
+%   volume  = {434}, pages = {435}, year = {1999},
+%   doi     = {10.1016/S0168-9002(99)00498-2}}
+%
+% @software{pyhf,
+%   author    = {Lukas Heinrich and Matthew Feickert and Giordon Stark},
+%   title     = {pyhf},
+%   doi       = {10.5281/zenodo.1169739}}
+%
+% @article{pyhf_joss,
+%   author  = {Heinrich, L. and Feickert, M. and Stark, G. and Cranmer, K.},
+%   title   = {pyhf: pure-{P}ython implementation of {HistFactory}},
+%   journal = {J. Open Source Softw.},
+%   volume  = {6}, number = {58}, pages = {2823}, year = {2021},
+%   doi     = {10.21105/joss.02823}}

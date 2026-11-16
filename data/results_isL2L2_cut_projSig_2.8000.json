@@ -1,0 +1,2314 @@
+{
+  "metadata": {
+    "suffix": "isL2L2_cut",
+    "task_id": 6,
+    "Val2": 7,
+    "proj_sig_cut": 2.8,
+    "z0_regions": {
+      "A": {
+        "lo": 0.24,
+        "hi": 0.38
+      },
+      "B": {
+        "lo": 0.38,
+        "hi": 0.48
+      },
+      "C": {
+        "lo": 0.48,
+        "hi": null
+      }
+    },
+    "mass_grid_MeV": [
+      50.0,
+      75.0,
+      100.0,
+      125.0,
+      150.0,
+      175.0,
+      200.0,
+      225.0,
+      250.0
+    ],
+    "epsilon_grid": [
+      0.0001,
+      0.00012955586655595704,
+      0.00016784722559064962,
+      0.00021745592760409819,
+      0.000281726911384784,
+      0.00036499374136589037,
+      0.00047287080450158787,
+      0.0006126318684621583,
+      0.0007937005259841,
+      0.0010282855942978896,
+      0.001332204312362705,
+      0.0017259488411773309,
+      0.0022360679774997894,
+      0.0028969572450301176,
+      0.0037531780625543482,
+      0.004862462362330365,
+      0.00629960524947437,
+      0.008161508170561079,
+      0.01057371263440564,
+      0.013698865030640954,
+      0.017747683298777857,
+      0.02299316489133851,
+      0.029788994023613714,
+      0.038593389345594996,
+      0.049999999999999996
+    ],
+    "description": "Signal and background for three |z0| regions. Cut order: psum in [1.5,3.0], hit-category, vtx_proj_sig < 2.8, then |z0| band. Regions: A=(0.24,0.38), B=(0.38,0.48), C=(0.48,inf). signal_regionX = floor(S_yield); background_regionX = resolution-window cutflow estimate."
+  },
+  "n_points": 225,
+  "data": [
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0001,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.00012955586655595704,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.00016784722559064962,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.00021745592760409819,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.000281726911384784,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.00036499374136589037,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.00047287080450158787,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0006126318684621583,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0007937005259841,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0010282855942978896,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.001332204312362705,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0017259488411773309,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0022360679774997894,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0028969572450301176,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 1,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.0037531780625543482,
+      "signal_regionA": 1,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 1,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.004862462362330365,
+      "signal_regionA": 1,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 2,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.00629960524947437,
+      "signal_regionA": 2,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 1,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.008161508170561079,
+      "signal_regionA": 2,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 1,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.01057371263440564,
+      "signal_regionA": 3,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.013698865030640954,
+      "signal_regionA": 3,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.017747683298777857,
+      "signal_regionA": 2,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.02299316489133851,
+      "signal_regionA": 1,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.029788994023613714,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.038593389345594996,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 50.0,
+      "epsilon": 0.049999999999999996,
+      "signal_regionA": 0,
+      "background_regionA": 4614.593698175788,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0001,
+      "signal_regionA": 0,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 0,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00012955586655595704,
+      "signal_regionA": 0,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 0,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00016784722559064962,
+      "signal_regionA": 0,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 0,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00021745592760409819,
+      "signal_regionA": 0,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 0,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.000281726911384784,
+      "signal_regionA": 0,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 0,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00036499374136589037,
+      "signal_regionA": 0,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 0,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00047287080450158787,
+      "signal_regionA": 0,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 0,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0006126318684621583,
+      "signal_regionA": 0,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 1,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0007937005259841,
+      "signal_regionA": 0,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 2,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0010282855942978896,
+      "signal_regionA": 0,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 6,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.001332204312362705,
+      "signal_regionA": 1,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 14,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0017259488411773309,
+      "signal_regionA": 3,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 1,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 28,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0022360679774997894,
+      "signal_regionA": 6,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 3,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 45,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0028969572450301176,
+      "signal_regionA": 11,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 5,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 55,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.0037531780625543482,
+      "signal_regionA": 15,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 6,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 48,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.004862462362330365,
+      "signal_regionA": 17,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 5,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 27,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00629960524947437,
+      "signal_regionA": 15,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 3,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 8,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.008161508170561079,
+      "signal_regionA": 10,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 1,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 1,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.01057371263440564,
+      "signal_regionA": 5,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 0,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.013698865030640954,
+      "signal_regionA": 4,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 0,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.017747683298777857,
+      "signal_regionA": 5,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 0,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.02299316489133851,
+      "signal_regionA": 5,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 0,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.029788994023613714,
+      "signal_regionA": 3,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 0,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.038593389345594996,
+      "signal_regionA": 1,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 0,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.049999999999999996,
+      "signal_regionA": 0,
+      "background_regionA": 10880.463763432172,
+      "signal_regionB": 0,
+      "background_regionB": 593.4798416417549,
+      "signal_regionC": 0,
+      "background_regionC": 395.65322776116994
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0001,
+      "signal_regionA": 0,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 0,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00012955586655595704,
+      "signal_regionA": 0,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 0,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00016784722559064962,
+      "signal_regionA": 0,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 0,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00021745592760409819,
+      "signal_regionA": 0,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 0,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.000281726911384784,
+      "signal_regionA": 0,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 0,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00036499374136589037,
+      "signal_regionA": 0,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 1,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00047287080450158787,
+      "signal_regionA": 0,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 2,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0006126318684621583,
+      "signal_regionA": 0,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 7,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0007937005259841,
+      "signal_regionA": 0,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 17,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0010282855942978896,
+      "signal_regionA": 1,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 37,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.001332204312362705,
+      "signal_regionA": 3,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 1,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 71,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0017259488411773309,
+      "signal_regionA": 6,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 3,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 111,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0022360679774997894,
+      "signal_regionA": 11,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 4,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 134,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0028969572450301176,
+      "signal_regionA": 17,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 6,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 118,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.0037531780625543482,
+      "signal_regionA": 19,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 6,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 68,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.004862462362330365,
+      "signal_regionA": 17,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 4,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 23,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00629960524947437,
+      "signal_regionA": 11,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 1,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 3,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.008161508170561079,
+      "signal_regionA": 6,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 0,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.01057371263440564,
+      "signal_regionA": 5,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 0,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.013698865030640954,
+      "signal_regionA": 9,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 0,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.017747683298777857,
+      "signal_regionA": 23,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 0,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.02299316489133851,
+      "signal_regionA": 62,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 0,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.029788994023613714,
+      "signal_regionA": 172,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 0,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.038593389345594996,
+      "signal_regionA": 481,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 0,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.049999999999999996,
+      "signal_regionA": 1353,
+      "background_regionA": 2611.3055705786915,
+      "signal_regionB": 0,
+      "background_regionB": 401.7393185505679,
+      "signal_regionC": 0,
+      "background_regionC": 401.7393185505679
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0001,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 0,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00012955586655595704,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 0,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00016784722559064962,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 0,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00021745592760409819,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 0,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.000281726911384784,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 0,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00036499374136589037,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 1,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00047287080450158787,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 4,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0006126318684621583,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 10,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0007937005259841,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 23,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0010282855942978896,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 46,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.001332204312362705,
+      "signal_regionA": 1,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 74,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0017259488411773309,
+      "signal_regionA": 2,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 1,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 94,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0022360679774997894,
+      "signal_regionA": 3,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 2,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 85,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0028969572450301176,
+      "signal_regionA": 4,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 2,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 53,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.0037531780625543482,
+      "signal_regionA": 4,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 1,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 20,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.004862462362330365,
+      "signal_regionA": 3,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 1,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 4,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00629960524947437,
+      "signal_regionA": 1,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 0,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.008161508170561079,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 0,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.01057371263440564,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 0,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.013698865030640954,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 0,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.017747683298777857,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 0,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.02299316489133851,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 0,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.029788994023613714,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 0,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.038593389345594996,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 0,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.049999999999999996,
+      "signal_regionA": 0,
+      "background_regionA": 1399.544626593807,
+      "signal_regionB": 0,
+      "background_regionB": 599.8048399687744,
+      "signal_regionC": 0,
+      "background_regionC": 399.86989331251624
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0001,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00012955586655595704,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00016784722559064962,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00021745592760409819,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.000281726911384784,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00036499374136589037,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 1,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00047287080450158787,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 3,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0006126318684621583,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 8,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0007937005259841,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 16,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0010282855942978896,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 27,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.001332204312362705,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 35,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0017259488411773309,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 34,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0022360679774997894,
+      "signal_regionA": 1,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 23,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0028969572450301176,
+      "signal_regionA": 1,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 10,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.0037531780625543482,
+      "signal_regionA": 1,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 2,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.004862462362330365,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00629960524947437,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.008161508170561079,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.01057371263440564,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.013698865030640954,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.017747683298777857,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.02299316489133851,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.029788994023613714,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.038593389345594996,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.049999999999999996,
+      "signal_regionA": 0,
+      "background_regionA": 1199.4933288295897,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0001,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00012955586655595704,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00016784722559064962,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00021745592760409819,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.000281726911384784,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00036499374136589037,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 1,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00047287080450158787,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 3,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0006126318684621583,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 7,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0007937005259841,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 14,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0010282855942978896,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 19,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.001332204312362705,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 21,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0017259488411773309,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 16,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0022360679774997894,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 8,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0028969572450301176,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 2,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.0037531780625543482,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.004862462362330365,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.00629960524947437,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.008161508170561079,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.01057371263440564,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.013698865030640954,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.017747683298777857,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.02299316489133851,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.029788994023613714,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.038593389345594996,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.049999999999999996,
+      "signal_regionA": 0,
+      "background_regionA": 199.7312252964427,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 199.7312252964427
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0001,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00012955586655595704,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00016784722559064962,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00021745592760409819,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.000281726911384784,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00036499374136589037,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00047287080450158787,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 2,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0006126318684621583,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 3,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0007937005259841,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 6,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0010282855942978896,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 7,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.001332204312362705,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 7,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0017259488411773309,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 4,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0022360679774997894,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 1,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0028969572450301176,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.0037531780625543482,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.004862462362330365,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.00629960524947437,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.008161508170561079,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.01057371263440564,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.013698865030640954,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.017747683298777857,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.02299316489133851,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.029788994023613714,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.038593389345594996,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 200.0,
+      "epsilon": 0.049999999999999996,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0001,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.00012955586655595704,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.00016784722559064962,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.00021745592760409819,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.000281726911384784,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.00036499374136589037,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.00047287080450158787,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 1,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0006126318684621583,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 2,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0007937005259841,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 3,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0010282855942978896,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 3,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.001332204312362705,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 2,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0017259488411773309,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 1,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0022360679774997894,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0028969572450301176,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.0037531780625543482,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.004862462362330365,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.00629960524947437,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.008161508170561079,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.01057371263440564,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.013698865030640954,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.017747683298777857,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.02299316489133851,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.029788994023613714,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.038593389345594996,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 225.0,
+      "epsilon": 0.049999999999999996,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 201.24434389140274
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0001,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.00012955586655595704,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.00016784722559064962,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.00021745592760409819,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.000281726911384784,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.00036499374136589037,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.00047287080450158787,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0006126318684621583,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 1,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0007937005259841,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 1,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0010282855942978896,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 1,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.001332204312362705,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0017259488411773309,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0022360679774997894,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0028969572450301176,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.0037531780625543482,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.004862462362330365,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.00629960524947437,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.008161508170561079,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.01057371263440564,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.013698865030640954,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.017747683298777857,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.02299316489133851,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.029788994023613714,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.038593389345594996,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    },
+    {
+      "mass_MeV": 250.0,
+      "epsilon": 0.049999999999999996,
+      "signal_regionA": 0,
+      "background_regionA": 0.0,
+      "signal_regionB": 0,
+      "background_regionB": 0.0,
+      "signal_regionC": 0,
+      "background_regionC": 0.0
+    }
+  ]
+}

@@ -20,6 +20,7 @@ dev = [
     "pytest>=7",
     "pytest-cov",
     "matplotlib>=3.6",
+    "pyyaml>=6.0",
 ]
 
 [tool.hatch.build.targets.wheel]

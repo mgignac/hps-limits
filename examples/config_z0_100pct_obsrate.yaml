@@ -1,0 +1,60 @@
+# HPS Limits — z0-binned shape fit, 100% projection from the OBSERVED-COUNT RATE
+#
+# Instead of flat-scaling the ABCD background estimate, the background is
+# projected from the measured 10% observed counts:
+#     bkg(100%) = obs(100%) = n_a_obs(10%) × lumi_ratio   (Asimov)
+# with lumi_ratio = L(full)/L(10%) = 161.799 / 18.0109 = 8.983393389558545.
+# Bins with zero observed events fall back to the ABCD estimate
+# (bkg_est × lumi_ratio) so none collapses to zero.  Because there is no real
+# full-lumi data, the observation is set to the projected background, so the
+# "observed" limit coincides with the median expected.
+#
+# Signal is scaled by the same luminosity ratio.
+#
+# Run with:
+#   python3.9 scripts/run_limits.py --config examples/config_z0_100pct_obsrate.yaml
+
+label: "HPS SIMPs (100% lumi, obs-rate)"
+mode: z0
+
+output_dir: ../plots/simp_100pc_obsrate
+
+# ── Signal inputs ─────────────────────────────────────────────────────────────
+z0_files:
+  - ../data/rory-latest/results_isL1L1_cut_projSig_2.8000.json
+  - ../data/rory-latest/results_isL1L2_cut_projSig_2.8000.json
+  - ../data/rory-latest/results_isL2L2_cut_projSig_2.8000.json
+  - ../data/rory-latest/results_isL2L3_cut_projSig_2.8000.json
+
+# ── Background inputs ─────────────────────────────────────────────────────────
+background_jsons:
+  - ../data/rory-latest/results_*_bin*.json
+background_projection: null
+
+# ── Luminosity projection ─────────────────────────────────────────────────────
+signal_scale: 8.983393389558545          # signal scales with luminosity
+# Background projected from observed counts (hybrid: ABCD fallback for 0-obs bins)
+background_observed_rate:
+  lumi_ratio: 8.983393389558545          # L(full)/L(10%) = 161.799 / 18.0109
+
+# ── Analysis options ──────────────────────────────────────────────────────────
+simps: true
+per_region: true
+run_cls: true
+run_mu: true
+mu_cap: 10000.0
+cl_level: 0.90
+
+# ── Background systematics (ABCD method) ──────────────────────────────────────
+# Kept identical to the 10% config (expected-band treatment).
+background_systematics:
+  file: ../data/rory-latest/background_systematics.json
+  treatment: expected_band
+  mode: components
+
+# ── Systematic studies ────────────────────────────────────────────────────────
+bkg_zero_floor: false
+
+# ── Summary exclusion plot ────────────────────────────────────────────────────
+summary_plot: true
+prior_exclusions: []

@@ -20,3 +20,4 @@ env/
 # Project-specific
 plots/
 .claude/
+.claude/settings.local.json

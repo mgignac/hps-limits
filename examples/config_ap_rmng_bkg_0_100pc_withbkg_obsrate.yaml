@@ -1,0 +1,44 @@
+# HPS Limits — A′ L1L1+L1L2+L2L2, rmng_bkg=0, 100% projection, observed-rate background
+#
+# Zero-Bkg-Cut scenario projected to the full dataset.  The 1% subset had zero
+# background events, so the rate is taken from the 10% observed counts (the
+# "Zero Bkg Cut" column) and projected to 100%:
+#     bkg(100%) = obs(100%) = n_a_obs(10%) × lumi_ratio    (Asimov)
+#   lumi_ratio = L(full)/L(10%) = 161.799 / 18.0109 = 8.983393389558545
+# Bins with zero observed stay zero (their rate is genuinely zero).  Signal is
+# scaled by the same factor.
+#
+#   python3.9 scripts/run_limits.py --config examples/config_ap_rmng_bkg_0_100pc_withbkg_obsrate.yaml
+
+label: "HPS A' (rmng_bkg=0, 100% lumi, Zero-Bkg-Cut obs-rate)"
+mode: classic
+signal_format: ap_displaced
+
+output_dir: ../plots/ap_rmng_bkg_0_100pc_withbkg_obsrate
+
+signal_jsons:
+  - file:   ../data/sarah-latest/rmng_bkg_0/ap_displaced_yield__l1l1_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L1L1
+  - file:   ../data/sarah-latest/rmng_bkg_0/ap_displaced_yield__l1l2_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L1L2
+  - file:   ../data/sarah-latest/rmng_bkg_0/ap_displaced_yield__l2l2_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L2L2
+
+# Background = "Zero Bkg Cut" observed counts (10%); projected via observed-rate.
+background_json: ../data/sarah-latest/rmng_bkg_0/background_counts_zerobkg.json
+
+simps: false
+per_region: true
+run_cls: false
+run_mu: true
+mu_cap: 10000.0
+cl_level: 0.90
+
+zero_background: false
+signal_scale: 8.983393389558545          # 10% → 100%
+background_observed_rate:
+  lumi_ratio: 8.983393389558545          # project Zero-Bkg-Cut counts 10% → 100%
+
+bkg_zero_floor: false
+summary_plot: false
+prior_exclusions: []

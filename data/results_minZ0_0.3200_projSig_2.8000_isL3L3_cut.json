@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "suffix": "isL3L3_cut",
+    "Val": 16,
+    "Val2": 7,
+    "min_z0_cut": 0.32,
+    "proj_sig_cut": 2.8,
+    "description": "Signal and background yields for events passing the stated min z0 cut (= 0.5 * Val / 25) and proj sig cut (= 4.0 * Val2 / 10). Each entry gives mass_MeV, epsilon, signal (floor of S_yield), background (B_yield), and Zbi at that grid point."
+  },
+  "n_points": 11,
+  "data": [
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00151991108,
+      "signal": 1,
+      "background": 0.0,
+      "Zbi": -1.0
+    },
+    {
+      "mass_MeV": 75.0,
+      "epsilon": 0.00284803587,
+      "signal": 1,
+      "background": 0.0,
+      "Zbi": -1.0
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.000811130831,
+      "signal": 2,
+      "background": 201.0582,
+      "Zbi": 0.091851
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00151991108,
+      "signal": 9,
+      "background": 201.0582,
+      "Zbi": 0.404324
+    },
+    {
+      "mass_MeV": 100.0,
+      "epsilon": 0.00284803587,
+      "signal": 5,
+      "background": 201.0582,
+      "Zbi": 0.201386
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.000811130831,
+      "signal": 3,
+      "background": 0.0,
+      "Zbi": -1.0
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00151991108,
+      "signal": 7,
+      "background": 0.0,
+      "Zbi": -1.0
+    },
+    {
+      "mass_MeV": 125.0,
+      "epsilon": 0.00284803587,
+      "signal": 1,
+      "background": 0.0,
+      "Zbi": -1.0
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.000811130831,
+      "signal": 2,
+      "background": 190.8046,
+      "Zbi": 0.06727
+    },
+    {
+      "mass_MeV": 150.0,
+      "epsilon": 0.00151991108,
+      "signal": 1,
+      "background": 190.8046,
+      "Zbi": 0.04826
+    },
+    {
+      "mass_MeV": 175.0,
+      "epsilon": 0.000811130831,
+      "signal": 1,
+      "background": 0.0,
+      "Zbi": -1.0
+    }
+  ]
+}

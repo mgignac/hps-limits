@@ -1,0 +1,47 @@
+# HPS Limits — SIMP z0 shape fit, 4pi, L1L1+L1L2+L2L2+L2L3+L3L3, 100% projection
+#
+# Re-run of config_z0_simp_4pi_latest_100pc.yaml against UPDATED signal inputs
+# (data/majd/latest/ refreshed 2026-09-17).  Identical background estimation:
+# 10% ABCD backgrounds (data/majd/bkg_majd/), flat-scaled 10% → 100%
+#     background_scale = 161.7999 / 18.0109 = 8.983443359299091
+# and m_VD → m_A mass-axis translation (background × 3.0/1.8).
+# Unique output directory so the earlier run is preserved.
+#
+#   python3.9 scripts/run_limits.py --config examples/config_z0_simp_4pi_latest_100pc_20260917.yaml
+
+label: "HPS SIMPs (4pi, 100% lumi)"
+mode: z0
+
+output_dir: ../plots/simp_4pi_latest_100pc_20260917
+
+# ── Signal inputs (5 categories, already 100%-scaled) ─────────────────────────
+z0_files:
+  - ../data/majd/latest/results_isL1L1_MGFixedCut_epsgrid150_4pi.json
+  - ../data/majd/latest/results_isL1L2_MGFixedCut_epsgrid150_4pi.json
+  - ../data/majd/latest/results_isL2L2_MGFixedCut_epsgrid150_4pi.json
+  - ../data/majd/latest/results_isL2L3_MGFixedCut_epsgrid150_4pi.json
+  - ../data/majd/latest/results_isL3L3_MGFixedCut_epsgrid150_4pi.json
+
+# ── Background: 10% ABCD estimate, flat-scaled to 100% ────────────────────────
+background_jsons:
+  - ../data/majd/bkg_majd/results_*_bin*.json
+background_projection: null
+background_scale: 8.983443359299091  # 10% → 100%  (161.7999 / 18.0109)
+
+# Mass-axis translation — background is m_VD, signal is m_A; m_A = (3.0/1.8)·m_VD.
+# Express everything as a function of m_A (limit axis).
+signal_mass_scale: 1.0
+background_mass_scale: 1.6666666666666665   # = 3.0/1.8  (m_VD → m_A)
+
+# ── Analysis options ──────────────────────────────────────────────────────────
+simps: true          # ε axis (SIMP coupling)
+per_region: true     # combined + each of the 5 categories
+run_cls: true
+run_mu: true
+mu_cap: 10000.0
+cl_level: 0.90
+signal_scale: 1.0    # signal files already at 100%
+
+bkg_zero_floor: false
+summary_plot: true
+prior_exclusions: []

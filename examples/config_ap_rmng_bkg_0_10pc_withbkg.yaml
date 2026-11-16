@@ -1,0 +1,62 @@
+# HPS Limits — A′ L1L1+L1L2+L2L2, rmng_bkg=0, 10%, with measured background counts
+#
+# Signal from the rmng_bkg_0 (zero-background-cut) optimization.  Background from
+# the "Zero Bkg Cut" column of the rmng_bkg_0pt1 event-count tables (the same
+# zero-background selection), converted via scripts/eventcount_to_background_json.py.
+# Observed = background (Asimov).
+#
+#   python3.9 scripts/run_limits.py --config examples/config_ap_rmng_bkg_0_10pc_withbkg.yaml
+
+label: "HPS A' (rmng_bkg=0, 10%, with bkg)"
+mode: classic
+signal_format: ap_displaced
+
+output_dir: ../plots/ap_rmng_bkg_0_10pc_withbkg_styled
+
+signal_jsons:
+  - file:   ../data/sarah-latest/rmng_bkg_0/ap_displaced_yield__l1l1_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L1L1
+  - file:   ../data/sarah-latest/rmng_bkg_0/ap_displaced_yield__l1l2_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L1L2
+  - file:   ../data/sarah-latest/rmng_bkg_0/ap_displaced_yield__l2l2_mass_window_min_y0_vtx_proj_scaled_10pct.json
+    region: L2L2
+
+# Measured background — "Zero Bkg Cut" counts (Asimov observed = bkg)
+background_json: ../data/sarah-latest/rmng_bkg_0/background_counts_zerobkg.json
+
+simps: false
+per_region: true
+run_cls: false
+run_mu: true
+mu_cap: 10000.0
+cl_level: 0.90
+
+zero_background: false              # use the background_json above
+signal_scale: 1.0                   # 10%
+
+# ── Signal systematics ────────────────────────────────────────────────────────
+# Each is a normsys nuisance parameter on the signal, 100% correlated across
+# L1L1/L1L2/L2L2 and profiled in the likelihood.  value = relative 1σ.
+signal_systematics:
+  - name: MC_xsec               # MC cross section
+    value: 0.01
+  - name: MC_corr_WAB           # MC correction factors (WABs)
+    value: 0.03
+  - name: MC_corr_accidental    # MC correction factors (accidentals)
+    value: 0.04
+  - name: target_position       # target position
+    value: 0.03
+  - name: mass_resolution       # mass resolution
+    value: 0.08
+  - name: data_mc_agreement     # data/MC agreement
+    value: 0.02
+
+# ROOT-style μ 2D map: annotations + y-axis truncation
+experiment_label: "HPS work in progress"
+lumi_label: "18.01 pb$^{-1}$ @ 3.74 GeV"
+y_max: 8.0e-8                       # ε² axis top (headroom so annotation sits on solid 10⁴ red)
+plot_format: pdf                    # one vector PDF per plot (separate obs/exp canvases)
+
+bkg_zero_floor: false
+summary_plot: false
+prior_exclusions: []

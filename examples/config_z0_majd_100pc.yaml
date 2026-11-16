@@ -1,0 +1,50 @@
+# HPS Limits — SIMP z0 shape fit, majd L1L1+L1L2+L2L2, 100% projection
+#
+# 100% projection twin of config_z0_l1l1_majd.yaml (same majd signals + 10%
+# background estimate).  Signal scaled 10%→100%; background projected from the
+# measured 10% observed counts via the observed-rate method (matching the main
+# SIMP 100% projection, config_z0_100pct_obsrate.yaml).
+#   lumi_ratio = L(full)/L(10%) = 161.799 / 18.0109 = 8.983393389558545
+#
+#   python3.9 scripts/run_limits.py --config examples/config_z0_majd_100pc.yaml
+
+label: "HPS SIMPs (majd, 100% lumi, obs-rate)"
+mode: z0
+
+output_dir: ../plots/simp_100pc_majd
+
+# ── Signal inputs (one file per hit category) ─────────────────────────────────
+z0_files:
+  - ../data/rory-latest/majd/results_isL1L1_projSig_2.8000_10percent.json
+  - ../data/rory-latest/majd/results_isL1L2_projSig_2.8000_10percent.json
+  - ../data/rory-latest/majd/results_isL2L2_projSig_2.8000_10percent.json
+
+# ── Background: 10% estimate for the three categories ─────────────────────────
+background_jsons:
+  - ../data/rory-latest/results_L1L1_bin*.json
+  - ../data/rory-latest/results_L1L2_bin*.json
+  - ../data/rory-latest/results_L2L2_bin*.json
+background_projection: null
+
+# ── Luminosity projection (10% → 100%) ────────────────────────────────────────
+signal_scale: 8.983393389558545          # scale signal yields
+background_observed_rate:
+  lumi_ratio: 8.983393389558545          # project background from observed counts
+
+# ── Analysis options ──────────────────────────────────────────────────────────
+simps: true
+per_region: true
+run_cls: true
+run_mu: true
+mu_cap: 10000.0
+cl_level: 0.90
+
+# ── Background systematics (ABCD method) ──────────────────────────────────────
+background_systematics:
+  file: ../data/rory-latest/background_systematics.json
+  treatment: expected_band
+  mode: components
+
+bkg_zero_floor: false
+summary_plot: true
+prior_exclusions: []

@@ -1,0 +1,46 @@
+# HPS Limits — SIMP z0 shape fit, "majd" signal, L1L1+L1L2+L2L2, 100% projection
+#
+# Signal from data/majd/results_is{L1L1,L1L2,L2L2}_majd.json (already scaled to
+# 100%, so signal_scale = 1).  Background from the 10% ABCD estimate in
+# data/majd/bkg_majd/, flat-scaled to full luminosity:
+#     background_scale = L(100%)/L(10%) = 161.7999 / 18.0109 = 8.983443359299091
+# (bkg_est and the real n_a_obs are both scaled; the JSON luminosity_pb is
+#  incorrect and unused — the explicit ratio above is authoritative.)
+#
+# Twin of config_z0_rory_100pc.yaml (rory selection).  Distinct from the earlier
+# config_z0_majd_100pc.yaml, which used the data/rory-latest/majd/ inputs.
+#
+#   python3.9 scripts/run_limits.py --config examples/config_z0_majd_flat_100pc.yaml
+
+label: "HPS SIMPs (majd, 100% lumi)"
+mode: z0
+
+output_dir: ../plots/simp_majd_flat_100pc
+
+# ── Signal inputs (majd selection, already 100%-scaled) ───────────────────────
+z0_files:
+  - ../data/majd/results_isL1L1_majd_eps2.json
+  - ../data/majd/results_isL1L2_majd_eps2.json
+  - ../data/majd/results_isL2L2_majd_eps2.json
+
+# ── Background: 10% ABCD estimate, flat-scaled to 100% ────────────────────────
+background_jsons:
+  - ../data/majd/bkg_majd/results_L1L1_bin*.json
+  - ../data/majd/bkg_majd/results_L1L2_bin*.json
+  - ../data/majd/bkg_majd/results_L2L2_bin*.json
+background_projection: null          # nominal 10% bkg_est + real n_a_obs
+background_scale: 8.983443359299091  # 10% → 100%  (161.7999 / 18.0109)
+
+# ── Analysis options ──────────────────────────────────────────────────────────
+simps: true          # ε axis (SIMP coupling)
+per_region: true     # combined (L1L1+L1L2+L2L2) plus each category individually
+run_cls: true
+run_mu: true
+mu_cap: 10000.0
+cl_level: 0.90
+
+signal_scale: 1.0    # signal files already at 100%
+
+bkg_zero_floor: false
+summary_plot: true
+prior_exclusions: []

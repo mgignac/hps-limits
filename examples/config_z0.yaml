@@ -1,0 +1,85 @@
+# HPS Limits — z0-binned shape-fit configuration
+#
+# Paths are relative to this file's directory.
+# Run with:
+#   python3.9 scripts/run_limits.py --config examples/config_z0.yaml
+
+label: "HPS SIMPs"   # used in plot titles and output filename prefix
+mode: z0             # "z0" or "classic"
+
+output_dir: ../plots/simp_10pc
+
+# ── Signal inputs ─────────────────────────────────────────────────────────────
+# z0-binned signal files (one per hit category, signal fields only).
+# Glob patterns and bare directory paths are supported.
+z0_files:
+  - ../data/rory-latest/results_isL1L1_cut_projSig_2.8000.json
+  - ../data/rory-latest/results_isL1L2_cut_projSig_2.8000.json
+  - ../data/rory-latest/results_isL2L2_cut_projSig_2.8000.json
+  - ../data/rory-latest/results_isL2L3_cut_projSig_2.8000.json
+
+# ── Background inputs ─────────────────────────────────────────────────────────
+# Separate per-z0-bin background JSON files.
+# Accepts a list of paths, glob patterns, or a bare directory (loads all *.json).
+# Leave as [] to read background from z0_files (old combined-file format).
+background_jsons:
+  - ../data/rory-latest/results_*_bin*.json
+# Unblinded: use nominal bkg_est + real n_a_obs straight from the JSON
+# (no projection scaling, no Asimov substitution).
+background_projection: null
+
+# ── Analysis options ──────────────────────────────────────────────────────────
+simps: true          # true → ε axis (SIMPs coupling); false → ε² axis
+per_region: true     # run each hit category individually as well as combined
+run_cls: true        # CLs island-of-exclusion scan
+run_mu: true         # μ upper-limit scan (slower; set false to skip)
+mu_cap: 10000.0      # cap on reported μ upper limit (also controls early stopping)
+cl_level: 0.90       # confidence level (0.90 = 90% CL, threshold ~2.3 events zero-bkg)
+
+# ── Signal systematics ────────────────────────────────────────────────────────
+# Each entry is a normsys NP on the signal, correlated across all regions/z0-bins.
+# value is the relative 1σ uncertainty (e.g. 0.035 = 3.5%).
+#signal_systematics:
+#  - name: MC_xsec
+#    value: 0.035
+#  - name: pre_selection
+#    value: 0.030
+#  - name: mass_res
+#    value: 0.065
+#  - name: tight_selection
+#    value: 0.020
+#  - name: target_pos
+#    value: 0.090
+
+# ── Background systematics (ABCD method) ──────────────────────────────────────
+# Per region/z0-bin fractional uncertainties on the ABCD background prediction.
+# Channel names are matched via the _bin{N} → z0-label map (bin1→lo, bin2→hi).
+# Comment out the block to disable.
+#
+# treatment: how the systematic enters the limit
+#   "expected_band" → applied only to the COMBINED expected (Brazil) band:
+#                     the band is recomputed with the background shifted ±1σ_total
+#                     and combined in quadrature with the statistical band.
+#                     The observed limit uses the nominal background (no NPs).
+#   "profile"       → added as normsys nuisance parameters profiled in the
+#                     likelihood (affects observed + expected; see mode below).
+#
+# mode: correlation structure — only used when treatment == "profile"
+#   "components"          → one correlated NP per component (sideband, control_region)
+#   "total"              → single correlated NP from total_frac
+#   "total_uncorrelated" → independent per-channel NP from total_frac
+background_systematics:
+  file: ../data/rory-latest/background_systematics.json
+  treatment: expected_band
+  mode: components
+
+# ── Systematic studies ────────────────────────────────────────────────────────
+bkg_zero_floor: false
+
+# ── Summary exclusion plot ────────────────────────────────────────────────────
+summary_plot: true
+prior_exclusions: []
+#  - label: "Previous result"
+#    file:  ../data/prior_exclusion.txt
+#    color: "tab:blue"
+#    linestyle: "--"
